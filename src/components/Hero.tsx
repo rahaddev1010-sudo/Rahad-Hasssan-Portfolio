@@ -47,7 +47,7 @@ export const Hero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 mb-14"
             >
-              <a href="#contact" className="bg-gradient-to-r from-[#60A5FA] to-blue-500 text-white font-bold px-8 py-3.5 rounded-full hover:shadow-[0_8px_20px_rgb(96,165,250,0.3)] hover:scale-105 transition-all text-sm text-center">
+              <a href="#contact" className="bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white font-bold px-8 py-3.5 rounded-full hover:shadow-[0_8px_20px_rgb(96,165,250,0.3)] hover:scale-105 transition-all text-sm text-center">
                 Let's Work Together
               </a>
               <a href="#work" className="bg-white border border-gray-100 text-gray-900 font-bold px-8 py-3.5 rounded-full hover:shadow-md transition-all text-sm text-center">

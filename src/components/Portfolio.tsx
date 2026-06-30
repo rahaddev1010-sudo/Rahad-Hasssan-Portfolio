@@ -53,7 +53,7 @@ export const Portfolio = () => {
                 }}
                 className={`px-6 py-2.5 rounded-full text-[13px] font-bold transition-all duration-300 ${
                   activeTab === tab
-                    ? 'bg-gradient-to-r from-[#60A5FA] to-blue-500 text-white shadow-[0_4px_12px_rgb(96,165,250,0.3)]'
+                    ? 'bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white shadow-[0_4px_12px_rgb(96,165,250,0.3)]'
                     : 'text-gray-500 hover:text-gray-900 hover:bg-white/50'
                 }`}
               >
@@ -97,7 +97,7 @@ export const Portfolio = () => {
                     <h3 className="text-[20px] font-bold text-gray-900 mb-2 group-hover:text-[#60A5FA] transition-colors">{project.title}</h3>
                     <p className="text-gray-500 text-[14px] leading-relaxed line-clamp-2 pr-4">{project.description}</p>
                   </div>
-                  <button className="w-12 h-12 rounded-full bg-gradient-to-r from-[#60A5FA] to-blue-500 text-white flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:shadow-[0_8px_20px_rgb(96,165,250,0.4)] transition-all">
+                  <button className="w-12 h-12 rounded-full bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:shadow-[0_8px_20px_rgb(96,165,250,0.4)] transition-all">
                     <ArrowUpRight className="w-5 h-5" />
                   </button>
                 </div>
@@ -111,14 +111,14 @@ export const Portfolio = () => {
             {visibleCount < filteredProjects.length ? (
               <button 
                 onClick={handleLoadMore}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-to-r from-[#60A5FA] to-blue-500 text-white font-bold text-[14px] hover:shadow-[0_8px_20px_rgb(96,165,250,0.3)] transition-all hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white font-bold text-[14px] hover:shadow-[0_8px_20px_rgb(96,165,250,0.3)] transition-all hover:scale-105"
               >
                 Load More Projects
               </button>
             ) : (
               <button 
                 onClick={() => setVisibleCount(6)}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-to-r from-[#60A5FA] to-blue-500 text-white font-bold text-[14px] hover:shadow-[0_8px_20px_rgb(96,165,250,0.3)] transition-all hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white font-bold text-[14px] hover:shadow-[0_8px_20px_rgb(96,165,250,0.3)] transition-all hover:scale-105"
               >
                 Show Less
               </button>

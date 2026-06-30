@@ -48,81 +48,83 @@ export const Testimonials = () => {
       <div className="max-w-[1240px] mx-auto px-6">
         
         {/* Premium Gradient Container */}
-        <div className="bg-gradient-to-br from-blue-50/80 via-sky-100/50 to-white rounded-[40px] p-8 md:p-16 shadow-[0_20px_60px_rgb(96,165,250,0.08)] border border-blue-100/50 relative overflow-hidden">
-          {/* Decorative background elements */}
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white blur-[120px] rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-100/40 blur-[100px] rounded-full -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
-          
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center relative z-10">
+        <div className="rounded-[40px] p-[2px] bg-gradient-to-br from-[#60A5FA] via-purple-400 to-pink-400 shadow-[0_20px_60px_rgb(96,165,250,0.15)] relative">
+          <div className="bg-gradient-to-br from-blue-50/90 via-sky-50/90 to-white rounded-[38px] p-8 md:p-16 relative overflow-hidden h-full">
+            {/* Decorative background elements */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white blur-[120px] rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-100/40 blur-[100px] rounded-full -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
             
-            {/* Left Side: Header & Controls */}
-            <div className="w-full lg:w-1/3 text-center lg:text-left">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-100 text-[#60A5FA] mb-6 backdrop-blur-sm border border-blue-200">
-                <Quote className="w-6 h-6 fill-[#60A5FA]/20" />
-              </div>
-              <h2 className="text-[36px] md:text-[46px] font-bold text-gray-900 leading-[1.1] mb-6">
-                Client <br className="hidden lg:block" /> Success Stories
-              </h2>
-              <p className="text-gray-600 text-[16px] mb-10 max-w-md mx-auto lg:mx-0">
-                Don't just take my word for it. Here's what my clients have to say about their experience working with me.
-              </p>
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center justify-between relative z-10">
               
-              <div className="flex items-center justify-center lg:justify-start gap-4">
-                <button 
-                  onClick={prevTestimonial} 
-                  className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-200 text-gray-600 hover:text-[#60A5FA] transition-all bg-white/50 backdrop-blur-sm shadow-sm"
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
-                <button 
-                  onClick={nextTestimonial} 
-                  className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-200 text-gray-600 hover:text-[#60A5FA] transition-all bg-white/50 backdrop-blur-sm shadow-sm"
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </button>
+              {/* Left Side: Header & Controls */}
+              <div className="w-full lg:w-[40%] text-center lg:text-left">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-100 text-[#60A5FA] mb-6 backdrop-blur-sm border border-blue-200">
+                  <Quote className="w-6 h-6 fill-[#60A5FA]/20" />
+                </div>
+                <h2 className="text-[36px] md:text-[46px] font-bold text-gray-900 leading-[1.1] mb-6">
+                  Client <br /> Success Stories
+                </h2>
+                <p className="text-gray-600 text-[16px] mb-10 max-w-md mx-auto lg:mx-0">
+                  Don't just take my word for it. Here's what my clients have to say about their experience working with me.
+                </p>
+                
+                <div className="flex items-center justify-center lg:justify-start gap-4">
+                  <button 
+                    onClick={prevTestimonial} 
+                    className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:border-[#60A5FA] text-gray-600 hover:text-[#60A5FA] transition-all bg-white/50 backdrop-blur-sm shadow-sm"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+                  <button 
+                    onClick={nextTestimonial} 
+                    className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:border-[#60A5FA] text-gray-600 hover:text-[#60A5FA] transition-all bg-white/50 backdrop-blur-sm shadow-sm"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </button>
+                </div>
               </div>
-            </div>
-
-            {/* Right Side: Slider */}
-            <div className="w-full lg:w-2/3 relative h-[420px] sm:h-[350px] md:h-[300px]">
-              <AnimatePresence initial={false} custom={direction} mode="wait">
-                <motion.div
-                  key={activeIndex}
-                  custom={direction}
-                  variants={slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{ 
-                    x: { type: "spring", stiffness: 200, damping: 25 },
-                    opacity: { duration: 0.3 }
-                  }}
-                  className="absolute inset-0 bg-white border border-gray-100 p-8 md:p-10 rounded-[32px] flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
-                >
-                  <div>
-                    <div className="flex mb-6 gap-1">
-                      {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400 drop-shadow-sm" />
-                      ))}
-                    </div>
-                    <p className="text-[17px] md:text-[20px] font-medium text-gray-700 mb-8 leading-relaxed">
-                      "{testimonials[activeIndex].text}"
-                    </p>
-                  </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center font-black text-2xl text-[#60A5FA] shadow-inner">
-                      {testimonials[activeIndex].author.charAt(0)}
-                    </div>
+  
+              {/* Right Side: Slider */}
+              <div className="w-full lg:w-[55%] relative h-[420px] sm:h-[350px] md:h-[300px]">
+                <AnimatePresence initial={false} custom={direction} mode="wait">
+                  <motion.div
+                    key={activeIndex}
+                    custom={direction}
+                    variants={slideVariants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{ 
+                      x: { type: "spring", stiffness: 200, damping: 25 },
+                      opacity: { duration: 0.3 }
+                    }}
+                    className="absolute inset-0 bg-white border border-gray-100 p-8 md:p-10 rounded-[32px] flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
+                  >
                     <div>
-                      <h4 className="font-bold text-gray-900 text-lg">{testimonials[activeIndex].author}</h4>
-                      <span className="text-gray-500 font-medium text-sm">{testimonials[activeIndex].role}</span>
+                      <div className="flex mb-6 gap-1">
+                        {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400 drop-shadow-sm" />
+                        ))}
+                      </div>
+                      <p className="text-[17px] md:text-[20px] font-medium text-gray-700 mb-8 leading-relaxed">
+                        "{testimonials[activeIndex].text}"
+                      </p>
                     </div>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
+                    
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center font-black text-2xl text-[#60A5FA] shadow-inner">
+                        {testimonials[activeIndex].author.charAt(0)}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 text-lg">{testimonials[activeIndex].author}</h4>
+                        <span className="text-gray-500 font-medium text-sm">{testimonials[activeIndex].role}</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+  
             </div>
-
           </div>
         </div>
 

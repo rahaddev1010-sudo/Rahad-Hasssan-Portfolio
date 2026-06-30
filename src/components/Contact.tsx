@@ -111,7 +111,7 @@ export const Contact = () => {
 
               <button 
                 type="submit" 
-                className="group w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-[#60A5FA] to-blue-500 text-white font-bold px-8 py-4 rounded-2xl hover:shadow-[0_8px_30px_rgb(96,165,250,0.4)] hover:scale-[1.02] transition-all duration-300"
+                className="group w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white font-bold px-8 py-4 rounded-2xl hover:shadow-[0_8px_30px_rgb(96,165,250,0.4)] hover:scale-[1.02] transition-all duration-300"
               >
                 <span>Send Message</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

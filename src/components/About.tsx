@@ -61,7 +61,7 @@ export const About = () => {
             </div>
             
             <div className="mb-8">
-              <a href="#journey" className="inline-block bg-gradient-to-r from-[#60A5FA] to-blue-500 text-white font-bold px-8 py-3.5 rounded-full hover:shadow-[0_8px_20px_rgb(96,165,250,0.3)] hover:scale-105 transition-all text-sm">
+              <a href="#journey" className="inline-block bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white font-bold px-8 py-3.5 rounded-full hover:shadow-[0_8px_20px_rgb(96,165,250,0.3)] hover:scale-105 transition-all text-sm">
                 Download Resume
               </a>
             </div>
