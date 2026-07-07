@@ -76,30 +76,50 @@ export const Portfolio = () => {
                 key={project.title}
                 className="group relative flex flex-col"
               >
-                {/* Image Container */}
-                <div className="relative overflow-hidden rounded-[32px] bg-gray-100 aspect-[4/5] mb-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  {/* Badge */}
-                  <div className="absolute top-6 left-6">
-                    <span className="inline-block px-4 py-1.5 bg-gray-900/80 backdrop-blur-md text-white text-[12px] font-bold rounded-full shadow-lg">
-                      {project.tag}
-                    </span>
+                {/* Image Container (Browser Mockup) */}
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] mb-6 group-hover:-translate-y-2 transition-all duration-500 rounded-[20px] shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-gray-200/50 bg-white">
+                  <div className="relative w-full h-full rounded-[20px] bg-white overflow-hidden flex flex-col">
+                    {/* Browser Header */}
+                    <div className="h-8 bg-[#f5f5f5] flex items-center px-4 gap-2 shrink-0 w-full border-b border-gray-200/80">
+                      <div className="flex gap-1.5">
+                        <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] border border-[#E0443E]"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] border border-[#DEA123]"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F] border border-[#1AAB29]"></div>
+                      </div>
+                      <div className="ml-4 flex-1 h-5 bg-white rounded-md border border-gray-200/80 flex items-center px-3 overflow-hidden shadow-sm">
+                         <span className="text-[9px] text-gray-500 font-medium truncate w-full">{project.link.replace('https://', '')}</span>
+                      </div>
+                    </div>
+                    {/* Image */}
+                    <div className="flex-1 w-full h-full relative overflow-hidden bg-gray-100 group-hover:bg-gray-200">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                      />
+                      {/* Badge overlay on image */}
+                      <div className="absolute top-4 right-4 z-20 pointer-events-none">
+                        <span className="inline-flex items-center justify-center px-3 py-1.5 bg-white/95 backdrop-blur-md text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded-md shadow-lg border border-gray-100">
+                          {project.tag}
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </a>
                 
                 {/* Content & Action */}
                 <div className="flex justify-between items-start gap-4 px-2">
                   <div className="flex-1">
-                    <h3 className="text-[20px] font-bold text-gray-900 mb-2 group-hover:text-[#60A5FA] transition-colors">{project.title}</h3>
+                    <h3 className="text-[20px] font-bold text-gray-900 mb-2 group-hover:text-[#60A5FA] transition-colors">
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        {project.title}
+                      </a>
+                    </h3>
                     <p className="text-gray-500 text-[14px] leading-relaxed line-clamp-2 pr-4">{project.description}</p>
                   </div>
-                  <button className="w-12 h-12 rounded-full bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:shadow-[0_8px_20px_rgb(96,165,250,0.4)] transition-all">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:shadow-[0_8px_20px_rgb(96,165,250,0.4)] transition-all">
                     <ArrowUpRight className="w-5 h-5" />
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             ))}

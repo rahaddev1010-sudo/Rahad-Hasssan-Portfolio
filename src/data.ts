@@ -124,76 +124,130 @@ export const education = [
 
 export const projects = [
   {
-    title: "Luxury Restaurant Website",
-    tag: "WordPress",
-    description: "Elegant restaurant reservation and menu website built with WordPress.",
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2574&auto=format&fit=crop"
+    title: "MRA Consultancy Platform",
+    tag: "WordPress Elementor",
+    description: "Professional business consulting and corporate advisory services.",
+    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2574&auto=format&fit=crop",
+    link: "https://mra-consultancy.com/"
   },
   {
-    title: "Dental Clinic Portal",
+    title: "Business Consulting Website",
+    tag: "WordPress Elementor",
+    description: "Modern e-commerce platform built for seamless online shopping.",
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2670&auto=format&fit=crop",
+    link: "https://idxbd.shop/woo/"
+  },
+  {
+    title: "VT1 Construction & Engineering",
+    tag: "WordPress",
+    description: "Professional construction, contracting, and building company website.",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2670&auto=format&fit=crop",
+    link: "https://vt1construction.com/"
+  },
+  {
+    title: "You Coaching Swiss Portal",
     tag: "Elementor",
-    description: "Professional dental clinic website with online appointment booking.",
-    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2574&auto=format&fit=crop"
+    description: "Personal development, leadership, and coaching services portal.",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop",
+    link: "https://www.you-coaching.ch/"
   },
   {
-    title: "Pro Cleaning Services",
+    title: "Happy Life Coaching Hub",
     tag: "WordPress",
-    description: "Cleaning agency website with custom quote calculator and booking system.",
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2670&auto=format&fit=crop"
+    description: "Life coaching and happiness consulting professional website.",
+    image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=2500&auto=format&fit=crop",
+    link: "https://milonhossen1010-com.us.stackstaging.com/coach/happy/"
   },
   {
-    title: "Boutique Fashion Store",
+    title: "Executive Coaching Network",
+    tag: "WordPress",
+    description: "Professional business, executive, and life coaching platform.",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop",
+    link: "https://milonhossen1010-com.us.stackstaging.com/coach/"
+  },
+  {
+    title: "Premium Digital Storefront",
     tag: "WooCommerce",
-    description: "Modern online clothing store built with WooCommerce and Elementor.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2670&auto=format&fit=crop"
+    description: "Feature-rich online store with diverse product catalogs.",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2670&auto=format&fit=crop",
+    link: "https://milonhossen1010-com.us.stackstaging.com/ecom/"
   },
   {
-    title: "Legal Advisory Firm",
-    tag: "WordPress",
-    description: "Corporate website for a law firm focusing on trust and professionalism.",
-    image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2624&auto=format&fit=crop"
-  },
-  {
-    title: "Fitness Gym Landing Page",
+    title: "Quixtec IT Infrastructure",
     tag: "Elementor",
-    description: "High-converting gym membership landing page designed with Elementor.",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2670&auto=format&fit=crop"
+    description: "Technology consulting, IT support, and corporate solutions.",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2670&auto=format&fit=crop",
+    link: "https://quixtec.com/"
   },
   {
-    title: "Eco-Friendly Products Store",
-    tag: "WooCommerce",
-    description: "Sustainable products e-commerce platform with WooCommerce integration.",
-    image: "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=2624&auto=format&fit=crop"
-  },
-  {
-    title: "Local Plumber Service",
+    title: "Charlotte Fitness Training",
     tag: "WordPress",
-    description: "Service booking website for a local plumbing company.",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2574&auto=format&fit=crop"
+    description: "Fitness coaching, online training programs, and workout plans.",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2670&auto=format&fit=crop",
+    link: "https://www.charlottepersonaltrainer.org/online-training/"
   },
   {
-    title: "Premium Spa & Wellness",
+    title: "PC Hilfe Tech Services",
     tag: "Elementor",
-    description: "Relaxing spa website with service lists and booking calendar.",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2670&auto=format&fit=crop"
+    description: "Professional local computer repair and IT support services.",
+    image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=2574&auto=format&fit=crop",
+    link: "https://pc-hilfe-zuerichsee-und-oberland.ch/pc-reparatur-in-ihre/pcreparatur-rapperswil/"
   },
   {
-    title: "Gourmet Bakery Shop",
-    tag: "WooCommerce",
-    description: "Online bakery store for ordering custom cakes and pastries.",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2672&auto=format&fit=crop"
-  },
-  {
-    title: "Real Estate Agency",
+    title: "MacBook Repair Specialists",
     tag: "WordPress",
-    description: "Property listing website with advanced filtering and agent profiles.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2573&auto=format&fit=crop"
+    description: "Specialized Apple MacBook repair and display replacement.",
+    image: "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=2600&auto=format&fit=crop",
+    link: "https://pc-hilfe-zuerichsee-und-oberland.ch/macbook-display-aust/macbook-display-austausch-rapperswil/"
   },
   {
-    title: "Tech Startup Landing",
+    title: "InBalance Wellness Platform",
+    tag: "WordPress",
+    description: "Holistic health, mindfulness, and wellness coaching.",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2640&auto=format&fit=crop",
+    link: "https://coach-inbalance.ch/"
+  },
+  {
+    title: "Strata Land Clearing Solutions",
     tag: "Elementor",
-    description: "Modern, high-converting landing page for a SaaS startup.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+    description: "Land clearing, grading, and site preparation in Colorado.",
+    image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2670&auto=format&fit=crop",
+    link: "https://strataexcavation.com/land-clearing-site-prep-colorado/"
+  },
+  {
+    title: "Strata Heavy Excavation",
+    tag: "WordPress",
+    description: "Heavy excavation, earthwork, and civil construction site.",
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2669&auto=format&fit=crop",
+    link: "https://strataexcavation.com/"
+  },
+  {
+    title: "Creative Agency Portfolio",
+    tag: "WordPress",
+    description: "Digital marketing, design, and creative agency portfolio.",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop",
+    link: "https://milonhossen1010-com.us.stackstaging.com/home/"
+  },
+  {
+    title: "Bettawerks Marketing Hub",
+    tag: "Elementor",
+    description: "Data-driven digital marketing and business growth solutions.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+    link: "https://milonhossen1010-com.us.stackstaging.com/bettawerks-marketing/"
+  },
+  {
+    title: "Website Replication Engine",
+    tag: "WordPress",
+    description: "Website cloning, migration, and replication demonstration.",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2672&auto=format&fit=crop",
+    link: "https://milonhossen1010-com.us.stackstaging.com/clonesite/"
+  },
+  {
+    title: "Cookies & Cream Digital Menu",
+    tag: "Elementor",
+    description: "Ice cream, dessert franchise, and store location portal.",
+    image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=2664&auto=format&fit=crop",
+    link: "https://cookiesandcreamfranchise.com/"
   }
 ];
 
