@@ -121,6 +121,28 @@ export const Contact = () => {
                   />
                 </div>
                 <div className="space-y-2">
+                  <label className="text-sm font-bold text-gray-700 ml-1">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    name="phone"
+                    className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900"
+                    placeholder="+1 (234) 567-8900"
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-gray-700 ml-1">Email Address</label>
+                  <input 
+                    type="email" 
+                    name="email"
+                    required 
+                    className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900"
+                    placeholder="john@example.com"
+                  />
+                </div>
+                <div className="space-y-2">
                   <label className="text-sm font-bold text-gray-700 ml-1">Subject</label>
                   <input 
                     type="text" 
@@ -130,17 +152,6 @@ export const Contact = () => {
                     placeholder="Project Inquiry"
                   />
                 </div>
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-700 ml-1">Email Address</label>
-                <input 
-                  type="email" 
-                  name="email"
-                  required 
-                  className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900"
-                  placeholder="john@example.com"
-                />
               </div>
 
               <div className="space-y-2">
