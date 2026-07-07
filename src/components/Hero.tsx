@@ -6,8 +6,8 @@ export const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-24 overflow-hidden">
       {/* Background Shapes */}
-      <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl opacity-60 translate-x-1/3 -translate-y-1/4" />
-      <div className="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-cyan-50 rounded-full blur-3xl opacity-60 -translate-x-1/3 translate-y-1/4" />
+      <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl translate-x-1/3 -translate-y-1/4" />
+      <div className="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-cyan-50 rounded-full blur-3xl -translate-x-1/3 translate-y-1/4" />
 
       <div className="max-w-[1240px] mx-auto px-6 w-full py-12 md:py-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -84,10 +84,10 @@ export const Hero = () => {
             className="relative mx-auto w-full max-w-[500px] lg:max-w-full"
           >
             {/* Background glowing blob */}
-            <div className="absolute inset-0 bg-blue-100 rounded-full blur-[100px] opacity-40 transform -translate-y-10"></div>
+            <div className="absolute inset-0 bg-blue-100 rounded-full blur-[100px] transform -translate-y-10 opacity-60"></div>
             
             {/* Image Container */}
-            <div className="relative w-full aspect-square lg:aspect-[4/5] group bg-white/40 backdrop-blur-md rounded-[32px] p-6 shadow-xl border border-white/50">
+            <div className="relative w-full aspect-square lg:aspect-[4/5] group bg-white/40 backdrop-blur-md rounded-[32px] p-6 shadow-xl border border-white/50 hover:-translate-y-2 transition-transform duration-500">
               <div className="w-full h-full bg-white rounded-[24px] overflow-hidden relative">
                 <img
                   src="https://avatars.githubusercontent.com/u/297083478?s=400&u=9b790e97cb52625f656298298c143712068dd322&v=4"

@@ -17,6 +17,12 @@
   --radius-btn: 14px;
   --radius-img: 22px;
   --radius-input: 12px;
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
 }
 
 html {

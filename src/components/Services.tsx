@@ -15,7 +15,7 @@ export const Services = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="card-shadow p-6 md:p-8 flex flex-col items-start group h-full"
             >
-              <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center">
                   <service.icon className="w-6 h-6 text-white" />
                 </div>

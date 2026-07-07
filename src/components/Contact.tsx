@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { motion } from 'motion/react';
 import { personalInfo } from '../data';
 import { Mail, Phone, MapPin, Send, ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -7,7 +7,7 @@ export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     const form = e.currentTarget;
@@ -34,9 +34,10 @@ export const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="section-padding bg-[#F8FAFC] relative overflow-hidden">
+    <section id="contact" className="section-padding bg-gradient-to-br from-indigo-50/50 via-white to-blue-50/50 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/50 blur-[100px] rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-200/30 blur-[100px] rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-200/30 blur-[100px] rounded-full -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
       
       <div className="max-w-[1240px] mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -59,7 +60,7 @@ export const Contact = () => {
             </p>
 
             <div className="space-y-6">
-              <a href={`mailto:${personalInfo.email}`} className="group flex items-center p-6 bg-white rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-blue-100 transition-all">
+              <a href={`mailto:${personalInfo.email}`} className="group flex items-center p-6 bg-white rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-blue-100 hover:-translate-y-1 transition-all duration-300">
                 <div className="w-14 h-14 bg-blue-50 group-hover:bg-[#60A5FA] rounded-2xl flex items-center justify-center mr-6 shrink-0 transition-colors">
                   <Mail className="w-6 h-6 text-[#60A5FA] group-hover:text-white transition-colors" />
                 </div>
@@ -71,7 +72,7 @@ export const Contact = () => {
                 </div>
               </a>
               
-              <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} className="group flex items-center p-6 bg-white rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-blue-100 transition-all">
+              <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} className="group flex items-center p-6 bg-white rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-blue-100 hover:-translate-y-1 transition-all duration-300">
                 <div className="w-14 h-14 bg-blue-50 group-hover:bg-[#60A5FA] rounded-2xl flex items-center justify-center mr-6 shrink-0 transition-colors">
                   <Phone className="w-6 h-6 text-[#60A5FA] group-hover:text-white transition-colors" />
                 </div>
@@ -90,77 +91,80 @@ export const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-[40px] p-8 md:p-12 shadow-[0_20px_60px_rgb(0,0,0,0.05)] border border-gray-100"
+            className="bg-white/70 backdrop-blur-xl rounded-[40px] p-8 md:p-12 shadow-[0_20px_60px_rgb(0,0,0,0.05)] border border-white relative overflow-hidden"
           >
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Send a Message</h3>
-              <p className="text-gray-500 text-sm">I'll get back to you as soon as possible.</p>
+            {/* Inner Glow */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-100/60 to-purple-100/60 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+
+            <div className="mb-10 relative z-10">
+              <h3 className="text-[28px] font-black text-gray-900 mb-2 tracking-tight">Send a Message</h3>
+              <p className="text-gray-500 text-[15px]">I'll get back to you as soon as possible.</p>
             </div>
             
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-6 relative z-10" onSubmit={handleSubmit}>
               {isSubmitted && (
                 <motion.div 
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-green-50 text-green-600 p-4 rounded-2xl flex items-center gap-3 border border-green-100"
+                  className="bg-green-50/80 backdrop-blur-sm text-green-600 p-4 rounded-2xl flex items-center gap-3 border border-green-100/50 shadow-sm"
                 >
                   <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
-                  <p className="text-sm font-medium">Message sent successfully! I'll get back to you soon.</p>
+                  <p className="text-[14px] font-bold">Message sent successfully! I'll get back to you soon.</p>
                 </motion.div>
               )}
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-700 ml-1">Your Name</label>
+                <div className="space-y-2 group">
+                  <label className="text-[13px] font-bold text-gray-700 ml-2 uppercase tracking-wider group-focus-within:text-blue-500 transition-colors">Your Name</label>
                   <input 
                     type="text" 
                     name="name"
                     required 
-                    className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900"
+                    className="w-full px-5 py-4 rounded-[20px] border-2 border-transparent bg-white shadow-[0_2px_10px_rgb(0,0,0,0.02)] focus:border-blue-500 focus:shadow-[0_8px_30px_rgb(59,130,246,0.12)] outline-none transition-all text-gray-900 font-medium placeholder-gray-400"
                     placeholder="John Doe"
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-700 ml-1">Phone Number</label>
+                <div className="space-y-2 group">
+                  <label className="text-[13px] font-bold text-gray-700 ml-2 uppercase tracking-wider group-focus-within:text-blue-500 transition-colors">Phone Number</label>
                   <input 
                     type="tel" 
                     name="phone"
-                    className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900"
+                    className="w-full px-5 py-4 rounded-[20px] border-2 border-transparent bg-white shadow-[0_2px_10px_rgb(0,0,0,0.02)] focus:border-blue-500 focus:shadow-[0_8px_30px_rgb(59,130,246,0.12)] outline-none transition-all text-gray-900 font-medium placeholder-gray-400"
                     placeholder="+1 (234) 567-8900"
                   />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-700 ml-1">Email Address</label>
+                <div className="space-y-2 group">
+                  <label className="text-[13px] font-bold text-gray-700 ml-2 uppercase tracking-wider group-focus-within:text-blue-500 transition-colors">Email Address</label>
                   <input 
                     type="email" 
                     name="email"
                     required 
-                    className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900"
+                    className="w-full px-5 py-4 rounded-[20px] border-2 border-transparent bg-white shadow-[0_2px_10px_rgb(0,0,0,0.02)] focus:border-blue-500 focus:shadow-[0_8px_30px_rgb(59,130,246,0.12)] outline-none transition-all text-gray-900 font-medium placeholder-gray-400"
                     placeholder="john@example.com"
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-700 ml-1">Subject</label>
+                <div className="space-y-2 group">
+                  <label className="text-[13px] font-bold text-gray-700 ml-2 uppercase tracking-wider group-focus-within:text-blue-500 transition-colors">Subject</label>
                   <input 
                     type="text" 
                     name="subject"
                     required 
-                    className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900"
+                    className="w-full px-5 py-4 rounded-[20px] border-2 border-transparent bg-white shadow-[0_2px_10px_rgb(0,0,0,0.02)] focus:border-blue-500 focus:shadow-[0_8px_30px_rgb(59,130,246,0.12)] outline-none transition-all text-gray-900 font-medium placeholder-gray-400"
                     placeholder="Project Inquiry"
                   />
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-700 ml-1">Your Message</label>
+              <div className="space-y-2 group">
+                <label className="text-[13px] font-bold text-gray-700 ml-2 uppercase tracking-wider group-focus-within:text-blue-500 transition-colors">Your Message</label>
                 <textarea 
                   name="message"
                   required
                   rows={4}
-                  className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900 resize-none"
+                  className="w-full px-5 py-4 rounded-[20px] border-2 border-transparent bg-white shadow-[0_2px_10px_rgb(0,0,0,0.02)] focus:border-blue-500 focus:shadow-[0_8px_30px_rgb(59,130,246,0.12)] outline-none transition-all text-gray-900 font-medium placeholder-gray-400 resize-none"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
@@ -168,10 +172,12 @@ export const Contact = () => {
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="group w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white font-bold px-8 py-4 rounded-2xl hover:shadow-[0_8px_30px_rgb(96,165,250,0.4)] hover:scale-[1.02] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="group w-full flex items-center justify-center space-x-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-bold px-8 py-5 rounded-[20px] shadow-[0_8px_30px_rgb(79,70,229,0.3)] hover:shadow-[0_15px_40px_rgb(79,70,229,0.4)] hover:-translate-y-1 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 relative overflow-hidden"
               >
-                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
-                {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
+                {/* Button Shine Effect */}
+                <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                <span className="relative z-10 text-[16px]">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                {!isSubmitting && <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />}
               </button>
             </form>
           </motion.div>

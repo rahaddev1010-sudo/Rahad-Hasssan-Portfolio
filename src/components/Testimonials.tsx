@@ -98,12 +98,15 @@ export const Testimonials = () => {
                       x: { type: "spring", stiffness: 200, damping: 25 },
                       opacity: { duration: 0.3 }
                     }}
-                    className="absolute inset-0 bg-white border border-gray-100 p-8 md:p-10 rounded-[32px] flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
+                    className="absolute inset-0 bg-white/95 backdrop-blur-md border border-white p-8 md:p-10 rounded-[32px] flex flex-col justify-between shadow-[0_20px_40px_rgb(0,0,0,0.06)]"
                   >
-                    <div>
+                    {/* Quotation Mark Watermark */}
+                    <div className="absolute top-6 right-8 text-8xl font-serif leading-none text-blue-50/50 pointer-events-none select-none">"</div>
+                    
+                    <div className="relative z-10">
                       <div className="flex mb-6 gap-1">
                         {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400 drop-shadow-sm" />
+                          <Star key={i} className="w-5 h-5 fill-[#FFBD2E] text-[#FFBD2E] drop-shadow-sm" />
                         ))}
                       </div>
                       <p className="text-[17px] md:text-[20px] font-medium text-gray-700 mb-8 leading-relaxed">
@@ -111,13 +114,13 @@ export const Testimonials = () => {
                       </p>
                     </div>
                     
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center font-black text-2xl text-[#60A5FA] shadow-inner">
+                    <div className="flex items-center gap-4 relative z-10">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center font-black text-2xl text-white shadow-[0_8px_16px_rgb(99,102,241,0.2)]">
                         {testimonials[activeIndex].author.charAt(0)}
                       </div>
                       <div>
                         <h4 className="font-bold text-gray-900 text-lg">{testimonials[activeIndex].author}</h4>
-                        <span className="text-gray-500 font-medium text-sm">{testimonials[activeIndex].role}</span>
+                        <span className="text-blue-600 font-bold text-sm bg-blue-50 px-3 py-1 rounded-full">{testimonials[activeIndex].role}</span>
                       </div>
                     </div>
                   </motion.div>
@@ -128,33 +131,47 @@ export const Testimonials = () => {
           </div>
         </div>
 
-        {/* Stats Row */}
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
-          <div className="bg-white border border-gray-100 rounded-[24px] p-6 flex items-center gap-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
-            <div className="w-14 h-14 rounded-2xl bg-blue-50 text-[#60A5FA] flex items-center justify-center shrink-0">
-              <CheckCircle2 className="w-7 h-7" />
-            </div>
-            <div>
-              <h5 className="font-bold text-gray-900 text-[17px] mb-1">50+ Reviews</h5>
-              <p className="text-[13px] text-gray-500 font-medium">Verified feedback</p>
-            </div>
-          </div>
-          <div className="bg-white border border-gray-100 rounded-[24px] p-6 flex items-center gap-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
-            <div className="w-14 h-14 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center shrink-0">
-              <Trophy className="w-7 h-7" />
-            </div>
-            <div>
-              <h5 className="font-bold text-gray-900 text-[17px] mb-1">Top Rated</h5>
-              <p className="text-[13px] text-gray-500 font-medium">Consistent 5-star results</p>
+        {/* Premium Stats Row */}
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mt-12 lg:mt-16">
+          <div className="group relative bg-white rounded-[32px] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(56,189,248,0.1)] transition-all duration-500 overflow-hidden border border-gray-100 hover:border-sky-200">
+            {/* Background Glow */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-sky-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
+            <div className="relative z-10 flex flex-col gap-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-50 to-blue-50 text-sky-500 flex items-center justify-center border border-sky-100/50 shadow-sm group-hover:scale-110 group-hover:from-sky-500 group-hover:to-blue-600 group-hover:text-white transition-all duration-500">
+                <CheckCircle2 className="w-8 h-8" />
+              </div>
+              <div>
+                <h5 className="font-black text-gray-900 text-[24px] tracking-tight mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-600 group-hover:to-blue-600 transition-all">50+ Reviews</h5>
+                <p className="text-[15px] text-gray-500 font-medium">100% Verified client feedback</p>
+              </div>
             </div>
           </div>
-          <div className="bg-white border border-gray-100 rounded-[24px] p-6 flex items-center gap-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
-            <div className="w-14 h-14 rounded-2xl bg-pink-50 text-pink-500 flex items-center justify-center shrink-0">
-              <Globe2 className="w-7 h-7" />
+          
+          <div className="group relative bg-white rounded-[32px] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(168,85,247,0.1)] transition-all duration-500 overflow-hidden border border-gray-100 hover:border-purple-200">
+            {/* Background Glow */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-purple-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
+            <div className="relative z-10 flex flex-col gap-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-50 to-fuchsia-50 text-purple-500 flex items-center justify-center border border-purple-100/50 shadow-sm group-hover:scale-110 group-hover:from-purple-500 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500">
+                <Trophy className="w-8 h-8" />
+              </div>
+              <div>
+                <h5 className="font-black text-gray-900 text-[24px] tracking-tight mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-fuchsia-600 transition-all">Top Rated</h5>
+                <p className="text-[15px] text-gray-500 font-medium">Consistent 5-star project results</p>
+              </div>
             </div>
-            <div>
-              <h5 className="font-bold text-gray-900 text-[17px] mb-1">Worldwide</h5>
-              <p className="text-[13px] text-gray-500 font-medium">Global collaboration</p>
+          </div>
+          
+          <div className="group relative bg-white rounded-[32px] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(236,72,153,0.1)] transition-all duration-500 overflow-hidden border border-gray-100 hover:border-pink-200">
+            {/* Background Glow */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-pink-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
+            <div className="relative z-10 flex flex-col gap-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-50 text-pink-500 flex items-center justify-center border border-pink-100/50 shadow-sm group-hover:scale-110 group-hover:from-pink-500 group-hover:to-rose-600 group-hover:text-white transition-all duration-500">
+                <Globe2 className="w-8 h-8" />
+              </div>
+              <div>
+                <h5 className="font-black text-gray-900 text-[24px] tracking-tight mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-600 group-hover:to-rose-600 transition-all">Worldwide</h5>
+                <p className="text-[15px] text-gray-500 font-medium">Global client collaboration</p>
+              </div>
             </div>
           </div>
         </div>

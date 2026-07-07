@@ -10,7 +10,8 @@ import {
   Code2,
   MonitorSmartphone,
   LayoutTemplate,
-  Gauge
+  Gauge,
+  Sparkles
 } from 'lucide-react';
 
 export const personalInfo = {
@@ -61,57 +62,59 @@ export const services = [
 ];
 
 export const skills = [
-  { category: "Core Web", items: "HTML, CSS, PHP" },
-  { category: "CMS", items: "WordPress" },
-  { category: "Page Builders", items: "Elementor" },
-  { category: "Design Tools", items: "Figma" }
+  { category: "Frontend & Core", items: "HTML5, CSS3, JavaScript (ES6+), PHP, React.js, Tailwind CSS, TypeScript" },
+  { category: "Premium Elementor", items: "Elementor Pro, Theme Builder, Global Design System, Crocoblock (JetEngine), ACF Pro & CPT UI, Custom Queries, Advanced Loop Grids, GSAP & Motion Effects, Custom CSS/JS, Responsive Breakpoint Mastery, Header/Footer Builder, Multilingual (WPML), API Integrations & Webhooks, Popups & Interactions" },
+  { category: "WooCommerce Expert", items: "Full Store Setup, Tax & Shipping Zones, Payment Gateways (Stripe/PayPal), Variable Products, Inventory Management, Cart & Checkout Customization, Dynamic Pricing, Multi-currency, Subscriptions, Abandoned Cart Recovery" },
+  { category: "AI & Vibe Coding", items: "Cursor, Windsurf, GitHub Copilot, v0.dev, Bolt.new, Lovable.dev, Claude 3.5 Sonnet, ChatGPT-4o, Midjourney, Make.com AI Workflows" },
+  { category: "Optimization & SEO", items: "Core Web Vitals, Enterprise Performance, Technical SEO, Schema Markup, Advanced Security Setup" },
+  { category: "Design to Conversion", items: "Figma to WordPress, UI/UX Implementation, Conversion Rate Optimization (CRO), A/B Testing Integration, Heatmap Setup, Landing Page Architecture" }
 ];
 
 export const experience = [
   {
-    role: "Senior Web Developer",
-    company: "Tech Solutions Inc.",
+    role: "Senior WordPress & Elementor Expert",
+    company: "Freelance / Remote",
     period: "Jan 2022 - Present",
-    description: "Lead developer for modern web applications using React and Next.js. Improved performance and scalability across multiple client projects.",
+    description: "Designing and developing premium websites using Elementor Pro, Crocoblock, and AI tools (Claude, ChatGPT, Midjourney) for rapid, high-quality delivery.",
+    icon: LayoutTemplate
+  },
+  {
+    role: "WordPress Developer",
+    company: "Creative Agency",
+    period: "Mar 2020 - Dec 2021",
+    description: "Developed custom WordPress themes and complex eCommerce solutions. Integrated payment gateways and optimized websites for Core Web Vitals.",
     icon: Code2
   },
   {
-    role: "Frontend Developer",
-    company: "Creative Agency",
-    period: "Mar 2020 - Dec 2021",
-    description: "Developed pixel-perfect, responsive user interfaces. Collaborated with designers to bring concepts to life using React and Tailwind CSS.",
-    icon: MonitorSmartphone
-  },
-  {
-    role: "Junior Web Developer",
+    role: "Junior Web Designer",
     company: "StartUp Hub",
     period: "Jun 2018 - Feb 2020",
-    description: "Assisted in building custom WordPress themes and plugins. Managed database schemas and optimized frontend performance.",
-    icon: LayoutTemplate
+    description: "Assisted in building custom WordPress sites and landing pages. Used Elementor and WPBakery for pixel-perfect design implementation.",
+    icon: MonitorSmartphone
   }
 ];
 
 export const education = [
+  {
+    role: "Advanced AI & Vibe Coding",
+    company: "Online Bootcamps",
+    period: "2022 - Present",
+    description: "Mastered modern AI tools for web design, vibe coding with Cursor/Copilot, and advanced Elementor/WordPress architecture.",
+    icon: Sparkles
+  },
+  {
+    role: "Web Development Bootcamp",
+    company: "Udemy / Online",
+    period: "2019",
+    description: "Learned full-stack development concepts, focusing on WordPress, PHP, and APIs. Completed hands-on projects.",
+    icon: Code2
+  },
   {
     role: "B.Sc. in Computer Science",
     company: "National University",
     period: "2016 - 2020",
     description: "Graduated with honors. Focused on software engineering, algorithms, and web technologies.",
     icon: LayoutTemplate
-  },
-  {
-    role: "Web Development Bootcamp",
-    company: "Udemy / Online",
-    period: "2019",
-    description: "Learned full-stack development concepts, focusing on React, Node.js, and APIs. Completed hands-on projects.",
-    icon: Code2
-  },
-  {
-    role: "Advanced UI/UX Design",
-    company: "Coursera",
-    period: "2021",
-    description: "Specialized in user-centered design, prototyping, and creating responsive interfaces for web and mobile.",
-    icon: MonitorSmartphone
   },
   {
     role: "PHP & Laravel Mastery",
