@@ -32,7 +32,7 @@ export const Journey = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-8 py-2.5 rounded-full text-[13px] font-bold tracking-wide transition-all duration-300 ${
                   activeTab === tab.id
-                    ? 'bg-[#60A5FA] text-white shadow-md transform scale-[1.02]'
+                    ? 'bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white shadow-[0_4px_12px_rgb(96,165,250,0.3)] transform scale-[1.02]'
                     : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
                 }`}
               >

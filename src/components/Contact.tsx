@@ -1,8 +1,38 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { personalInfo } from '../data';
-import { Mail, Phone, MapPin, Send, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    
+    try {
+      const response = await fetch("https://formspree.io/f/mwvdzavg", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      
+      if (response.ok) {
+        setIsSubmitted(true);
+        form.reset();
+        setTimeout(() => setIsSubmitted(false), 5000);
+      }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <section id="contact" className="section-padding bg-[#F8FAFC] relative overflow-hidden">
       {/* Background decoration */}
@@ -67,24 +97,37 @@ export const Contact = () => {
               <p className="text-gray-500 text-sm">I'll get back to you as soon as possible.</p>
             </div>
             
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              {isSubmitted && (
+                <motion.div 
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-green-50 text-green-600 p-4 rounded-2xl flex items-center gap-3 border border-green-100"
+                >
+                  <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
+                  <p className="text-sm font-medium">Message sent successfully! I'll get back to you soon.</p>
+                </motion.div>
+              )}
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-700 ml-1">First Name</label>
+                  <label className="text-sm font-bold text-gray-700 ml-1">Your Name</label>
                   <input 
                     type="text" 
+                    name="name"
                     required 
                     className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900"
-                    placeholder="John"
+                    placeholder="John Doe"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-700 ml-1">Last Name</label>
+                  <label className="text-sm font-bold text-gray-700 ml-1">Subject</label>
                   <input 
                     type="text" 
+                    name="subject"
                     required 
                     className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900"
-                    placeholder="Doe"
+                    placeholder="Project Inquiry"
                   />
                 </div>
               </div>
@@ -93,6 +136,7 @@ export const Contact = () => {
                 <label className="text-sm font-bold text-gray-700 ml-1">Email Address</label>
                 <input 
                   type="email" 
+                  name="email"
                   required 
                   className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900"
                   placeholder="john@example.com"
@@ -102,6 +146,7 @@ export const Contact = () => {
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-700 ml-1">Your Message</label>
                 <textarea 
+                  name="message"
                   required
                   rows={4}
                   className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-[#60A5FA] focus:ring-4 focus:ring-blue-50 outline-none transition-all bg-gray-50/50 hover:bg-gray-50 text-gray-900 resize-none"
@@ -111,10 +156,11 @@ export const Contact = () => {
 
               <button 
                 type="submit" 
-                className="group w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white font-bold px-8 py-4 rounded-2xl hover:shadow-[0_8px_30px_rgb(96,165,250,0.4)] hover:scale-[1.02] transition-all duration-300"
+                disabled={isSubmitting}
+                className="group w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white font-bold px-8 py-4 rounded-2xl hover:shadow-[0_8px_30px_rgb(96,165,250,0.4)] hover:scale-[1.02] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                <span>Send Message</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
               </button>
             </form>
           </motion.div>
