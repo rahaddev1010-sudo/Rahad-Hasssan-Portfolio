@@ -28,12 +28,12 @@ export const About = () => {
             </div>
             
             {/* Badge */}
-            <div className="absolute -right-6 bottom-16 z-20 w-36 h-36 rounded-full shadow-[0_10px_30px_rgb(99,102,241,0.2)] overflow-hidden">
-              {/* Spinning gradient border */}
-              <div className="absolute inset-[-50%] bg-[conic-gradient(from_0deg,transparent_0_240deg,#3b82f6,#8b5cf6,#ec4899)] animate-[spin_3s_linear_infinite]"></div>
+            <div className="absolute -right-6 bottom-16 z-20 w-36 h-36 rounded-full shadow-[0_10px_30px_rgb(99,102,241,0.2)] overflow-hidden bg-blue-500">
+              {/* Spinning white border */}
+              <div className="absolute inset-[-50%] bg-[conic-gradient(from_0deg,transparent_0_240deg,white)] animate-[spin_3s_linear_infinite]"></div>
               
               {/* Inner Content */}
-              <div className="absolute inset-[5px] bg-gradient-to-br from-[#60A5FA] to-indigo-500 text-white rounded-full flex flex-col items-center justify-center shadow-inner z-10">
+              <div className="absolute inset-[4px] bg-gradient-to-br from-[#60A5FA] to-indigo-500 text-white rounded-full flex flex-col items-center justify-center shadow-inner z-10">
                 <div className="text-[36px] font-black leading-none mb-1 drop-shadow-md">3+</div>
                 <div className="text-[12px] text-center leading-[1.2] font-bold tracking-wider uppercase opacity-90">Years of<br/>Experience</div>
               </div>
