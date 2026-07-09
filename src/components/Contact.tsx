@@ -47,12 +47,12 @@ export const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-1.5 rounded-full border border-blue-100 text-[#60A5FA] font-bold text-[11px] tracking-[0.2em] uppercase mb-6 shadow-sm bg-white">
+            <span className="inline-block px-4 py-1.5 rounded-full border border-blue-100 text-blue-600 font-bold text-[11px] tracking-[0.2em] uppercase mb-6 shadow-sm bg-white">
               GET IN TOUCH
             </span>
             <h2 className="text-[40px] md:text-[50px] font-black text-gray-900 leading-[1.1] mb-6 tracking-tight">
               Let's create something <br className="hidden md:block" />
-              <span className="text-[#60A5FA]">extraordinary.</span>
+              <span className="text-blue-600">extraordinary.</span>
             </h2>
             <p className="text-[18px] text-gray-500 mb-10 max-w-md leading-relaxed">
               Have a project in mind, a question, or just want to say hello? 
@@ -61,24 +61,24 @@ export const Contact = () => {
 
             <div className="space-y-6">
               <a href={`mailto:${personalInfo.email}`} className="group flex items-center p-6 bg-white rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-blue-100 hover:-translate-y-1 transition-all duration-300">
-                <div className="w-14 h-14 bg-blue-50 group-hover:bg-[#60A5FA] rounded-2xl flex items-center justify-center mr-6 shrink-0 transition-colors">
-                  <Mail className="w-6 h-6 text-[#60A5FA] group-hover:text-white transition-colors" />
+                <div className="w-14 h-14 bg-blue-50 group-hover:bg-blue-600 rounded-2xl flex items-center justify-center mr-6 shrink-0 transition-colors">
+                  <Mail className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Drop a Line</h4>
-                  <span className="text-[17px] font-bold text-gray-900 group-hover:text-[#60A5FA] transition-colors">
+                  <span className="text-[17px] font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                     {personalInfo.email}
                   </span>
                 </div>
               </a>
               
               <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} className="group flex items-center p-6 bg-white rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-blue-100 hover:-translate-y-1 transition-all duration-300">
-                <div className="w-14 h-14 bg-blue-50 group-hover:bg-[#60A5FA] rounded-2xl flex items-center justify-center mr-6 shrink-0 transition-colors">
-                  <Phone className="w-6 h-6 text-[#60A5FA] group-hover:text-white transition-colors" />
+                <div className="w-14 h-14 bg-blue-50 group-hover:bg-blue-600 rounded-2xl flex items-center justify-center mr-6 shrink-0 transition-colors">
+                  <Phone className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Call Me</h4>
-                  <span className="text-[17px] font-bold text-gray-900 group-hover:text-[#60A5FA] transition-colors">
+                  <span className="text-[17px] font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                     {personalInfo.phone}
                   </span>
                 </div>

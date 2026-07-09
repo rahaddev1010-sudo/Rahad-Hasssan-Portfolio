@@ -54,7 +54,7 @@ export const Portfolio = () => {
                 className={`px-6 py-2.5 rounded-full text-[13px] font-bold transition-all duration-300 ${
                   activeTab === tab
                     ? 'bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white shadow-[0_4px_12px_rgb(96,165,250,0.3)]'
-                    : 'text-gray-500 hover:text-gray-900 hover:bg-white/50'
+                    : 'text-gray-500 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#60A5FA] hover:to-purple-500 hover:bg-white/50'
                 }`}
               >
                 {tab}
@@ -113,7 +113,7 @@ export const Portfolio = () => {
                   {/* Floating Tech Badge (Top Left) */}
                   <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20 pointer-events-none opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 transition-all duration-500 delay-100">
                      <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/95 backdrop-blur-md text-gray-900 text-[10px] sm:text-xs font-bold rounded-xl shadow-[0_8px_16px_rgb(0,0,0,0.08)] border border-white">
-                        <span className="w-2 h-2 rounded-full bg-[#60A5FA] shadow-[0_0_8px_rgb(96,165,250,0.6)]"></span>
+                        <span className="w-2 h-2 rounded-full bg-blue-600 shadow-[0_0_8px_rgb(96,165,250,0.6)]"></span>
                         {project.tag}
                      </span>
                   </div>
@@ -135,7 +135,7 @@ export const Portfolio = () => {
                 {/* Content & Action */}
                 <div className="flex justify-between items-start gap-4 px-2">
                   <div className="flex-1">
-                    <h3 className="text-[20px] font-bold text-gray-900 mb-2 group-hover:text-[#60A5FA] transition-colors">
+                    <h3 className="text-[20px] font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
                         {project.title}
                       </a>

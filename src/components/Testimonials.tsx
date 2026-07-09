@@ -58,8 +58,8 @@ export const Testimonials = () => {
               
               {/* Left Side: Header & Controls */}
               <div className="w-full lg:w-[40%] text-center lg:text-left">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-100 text-[#60A5FA] mb-6 backdrop-blur-sm border border-blue-200">
-                  <Quote className="w-6 h-6 fill-[#60A5FA]/20" />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 mb-6 backdrop-blur-sm border border-blue-200">
+                  <Quote className="w-6 h-6 fill-blue-600/20" />
                 </div>
                 <h2 className="text-[36px] md:text-[46px] font-bold text-gray-900 leading-[1.1] mb-6">
                   Client <br /> Success Stories
@@ -71,13 +71,13 @@ export const Testimonials = () => {
                 <div className="flex items-center justify-center lg:justify-start gap-4">
                   <button 
                     onClick={prevTestimonial} 
-                    className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:border-[#60A5FA] text-gray-600 hover:text-[#60A5FA] transition-all bg-white/50 backdrop-blur-sm shadow-sm"
+                    className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-600 text-gray-600 hover:text-blue-600 transition-all bg-white/50 backdrop-blur-sm shadow-sm"
                   >
                     <ChevronLeft className="w-6 h-6" />
                   </button>
                   <button 
                     onClick={nextTestimonial} 
-                    className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:border-[#60A5FA] text-gray-600 hover:text-[#60A5FA] transition-all bg-white/50 backdrop-blur-sm shadow-sm"
+                    className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:border-blue-600 text-gray-600 hover:text-blue-600 transition-all bg-white/50 backdrop-blur-sm shadow-sm"
                   >
                     <ChevronRight className="w-6 h-6" />
                   </button>

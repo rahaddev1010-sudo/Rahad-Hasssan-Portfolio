@@ -16,24 +16,24 @@ export const About = () => {
             className="lg:col-span-5 relative"
           >
             {/* Blue Blob Background */}
-            <div className="absolute top-0 left-0 w-32 h-32 bg-[#60A5FA] rounded-br-[40px] rounded-tl-[40px] z-0 -translate-x-4 -translate-y-4"></div>
+            <div className="absolute top-0 left-0 w-32 h-32 bg-blue-600 rounded-br-[40px] rounded-tl-[40px] z-0 -translate-x-4 -translate-y-4"></div>
             
             {/* Image Card */}
             <div className="relative bg-white rounded-[40px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] overflow-hidden z-10 flex justify-center items-center border border-gray-50/50 aspect-square group">
               <img 
-                src="https://avatars.githubusercontent.com/u/297083478?s=400&u=9b790e97cb52625f656298298c143712068dd322&v=4" 
+                src="/about-image.jpg" 
                 alt={personalInfo.name} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             
             {/* Badge */}
-            <div className="absolute -right-6 bottom-16 z-20 w-36 h-36 rounded-full shadow-[0_10px_30px_rgb(99,102,241,0.2)] overflow-hidden bg-blue-500">
-              {/* Spinning white border */}
-              <div className="absolute inset-[-50%] bg-[conic-gradient(from_0deg,transparent_0_240deg,white)] animate-[spin_3s_linear_infinite]"></div>
+            <div className="absolute -right-6 bottom-16 z-20 w-36 h-36 bg-white rounded-full shadow-[0_10px_30px_rgb(96,165,250,0.4)] overflow-hidden">
+              {/* Spinning gradient border */}
+              <div className="absolute inset-[-50%] bg-[conic-gradient(from_0deg,transparent_0_120deg,#38bdf8,#818cf8,#c084fc,#38bdf8)] animate-[spin_2s_linear_infinite]"></div>
               
               {/* Inner Content */}
-              <div className="absolute inset-[4px] bg-gradient-to-br from-[#60A5FA] to-indigo-500 text-white rounded-full flex flex-col items-center justify-center shadow-inner z-10">
+              <div className="absolute inset-[5px] bg-gradient-to-br from-[#60A5FA] via-indigo-500 to-purple-500 text-white rounded-full flex flex-col items-center justify-center shadow-inner z-10">
                 <div className="text-[36px] font-black leading-none mb-1 drop-shadow-md">3+</div>
                 <div className="text-[12px] text-center leading-[1.2] font-bold tracking-wider uppercase opacity-90">Years of<br/>Experience</div>
               </div>

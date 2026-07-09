@@ -17,7 +17,7 @@ export const Journey = () => {
         
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-sky-200 text-[#60A5FA] font-bold text-[11px] tracking-[0.2em] uppercase mb-4 shadow-sm bg-sky-50/50">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-sky-200 text-blue-600 font-bold text-[11px] tracking-[0.2em] uppercase mb-4 shadow-sm bg-sky-50/50">
             JOURNEY
           </span>
           <h2 className="text-[32px] md:text-[40px] font-bold text-gray-900 leading-[1.2] mb-8">
@@ -33,7 +33,7 @@ export const Journey = () => {
                 className={`relative px-8 py-3 rounded-full text-[14px] font-bold tracking-wide transition-all duration-300 z-10 min-w-[160px] ${
                   activeTab === tab.id
                     ? 'text-white'
-                    : 'text-gray-500 hover:text-gray-900'
+                    : 'text-gray-500 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#60A5FA] hover:to-purple-500 hover:bg-white/50'
                 }`}
               >
                 {activeTab === tab.id && (
@@ -62,7 +62,7 @@ export const Journey = () => {
                 className="space-y-6"
               >
                 {education.map((item, index) => (
-                  <div key={index} className="group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(96,165,250,0.12)] hover:-translate-y-1 transition-all duration-400 relative">
+                  <div key={index} className="group bg-gradient-to-br from-[#60A5FA]/10 via-white to-purple-500/10 border border-[#60A5FA]/20 rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(96,165,250,0.08)] hover:shadow-[0_12px_40px_rgb(96,165,250,0.15)] hover:-translate-y-1 transition-all duration-400 relative">
                     
                     {/* Background glow effect */}
                     <div className="absolute -left-20 -top-20 w-40 h-40 bg-gradient-to-br from-indigo-100/40 to-purple-100/40 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
@@ -82,7 +82,7 @@ export const Journey = () => {
                     <div className="flex flex-col md:flex-row gap-6 items-start md:items-center px-8 py-8 relative z-10">
                       {/* Left side logo/company area */}
                       <div className="md:w-[30%] shrink-0 flex items-center gap-4">
-                        <div className="w-16 h-16 shrink-0 bg-white border border-gray-100 shadow-sm flex items-center justify-center rounded-2xl text-gray-400 group-hover:scale-110 group-hover:border-indigo-100 group-hover:bg-gradient-to-br group-hover:from-indigo-500 group-hover:to-purple-500 group-hover:text-white transition-all duration-500">
+                        <div className="w-16 h-16 shrink-0 bg-white/60 border border-[#60A5FA]/20 shadow-sm flex items-center justify-center rounded-2xl text-gray-400 group-hover:scale-110 group-hover:border-transparent group-hover:bg-gradient-to-br group-hover:from-[#60A5FA] group-hover:via-indigo-500 group-hover:to-purple-500 group-hover:text-white transition-all duration-500">
                           <item.icon size={26} strokeWidth={2} />
                         </div>
                         <h4 className="text-[18px] md:text-[22px] font-black text-gray-900 tracking-tight leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-600 group-hover:to-purple-600 transition-all duration-300">
@@ -123,7 +123,7 @@ export const Journey = () => {
                         hidden: { opacity: 0, y: 20 },
                         show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
                       }}
-                      className="group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(56,189,248,0.12)] hover:-translate-y-1 transition-all duration-400 relative"
+                      className="group bg-gradient-to-br from-[#60A5FA]/10 via-white to-purple-500/10 border border-[#60A5FA]/20 rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(96,165,250,0.08)] hover:shadow-[0_12px_40px_rgb(96,165,250,0.15)] hover:-translate-y-1 transition-all duration-400 relative"
                     >
                       {/* Background glow effect */}
                       <div className="absolute -right-20 -top-20 w-48 h-48 bg-gradient-to-bl from-sky-100/50 via-blue-100/30 to-transparent rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
@@ -132,7 +132,7 @@ export const Journey = () => {
                       <div className="flex flex-col md:flex-row gap-6 items-start md:items-center px-8 py-8 relative z-10">
                         {/* Left Side */}
                         <div className="md:w-[35%] shrink-0 flex items-center gap-5">
-                          <div className="w-16 h-16 shrink-0 bg-white border border-gray-100 shadow-sm flex items-center justify-center rounded-2xl group-hover:scale-110 group-hover:border-sky-200 group-hover:bg-gradient-to-br group-hover:from-sky-500 group-hover:to-blue-600 group-hover:text-white transition-all duration-500">
+                          <div className="w-16 h-16 shrink-0 bg-white/60 border border-[#60A5FA]/20 shadow-sm flex items-center justify-center rounded-2xl group-hover:scale-110 group-hover:border-transparent group-hover:bg-gradient-to-br group-hover:from-[#60A5FA] group-hover:via-indigo-500 group-hover:to-purple-500 group-hover:text-white transition-all duration-500">
                             {index === 0 && <Code2 className="w-7 h-7 text-blue-500 group-hover:text-white transition-colors" />}
                             {index === 1 && <Layers className="w-7 h-7 text-purple-500 group-hover:text-white transition-colors" />}
                             {index === 2 && <ShoppingCart className="w-7 h-7 text-pink-500 group-hover:text-white transition-colors" />}
@@ -151,7 +151,7 @@ export const Journey = () => {
                             {skill.items.split(', ').map((item, idx) => (
                               <span 
                                 key={idx}
-                                className="px-4 py-2 rounded-xl bg-gray-50/50 border border-gray-100 text-[13.5px] font-semibold text-gray-600 hover:bg-white hover:border-sky-200 hover:text-sky-600 hover:shadow-[0_4px_12px_rgb(56,189,248,0.15)] hover:-translate-y-0.5 transition-all duration-300 cursor-default"
+                                className="px-4 py-2 rounded-xl bg-white/50 border border-[#60A5FA]/20 text-[13.5px] font-semibold text-gray-600 hover:bg-gradient-to-r hover:from-[#60A5FA]/10 hover:to-purple-500/10 hover:border-[#60A5FA]/50 hover:text-indigo-600 hover:shadow-[0_4px_12px_rgb(96,165,250,0.15)] hover:-translate-y-0.5 transition-all duration-300 cursor-default"
                               >
                                 {item}
                               </span>

@@ -30,27 +30,27 @@ export const Navbar = () => {
       {/* Desktop Socials */}
       <div className="hidden lg:flex items-center space-x-2">
         {personalInfo.socials.instagram && (
-          <a href={personalInfo.socials.instagram} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-[#1e293b] text-white flex items-center justify-center hover:bg-[#60A5FA] transition-colors">
+          <a href={personalInfo.socials.instagram} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-[#1e293b] text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
             <Instagram size={14} />
           </a>
         )}
         {personalInfo.socials.facebook && (
-          <a href={personalInfo.socials.facebook} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-[#1e293b] text-white flex items-center justify-center hover:bg-[#60A5FA] transition-colors">
+          <a href={personalInfo.socials.facebook} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-[#1e293b] text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
             <Facebook size={14} />
           </a>
         )}
         {personalInfo.socials.twitter && (
-          <a href={personalInfo.socials.twitter} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-[#1e293b] text-white flex items-center justify-center hover:bg-[#60A5FA] transition-colors">
+          <a href={personalInfo.socials.twitter} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-[#1e293b] text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
             <Twitter size={14} />
           </a>
         )}
         {personalInfo.socials.linkedin && (
-          <a href={personalInfo.socials.linkedin} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-[#1e293b] text-white flex items-center justify-center hover:bg-[#60A5FA] transition-colors">
+          <a href={personalInfo.socials.linkedin} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-[#1e293b] text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
             <Linkedin size={14} />
           </a>
         )}
         {personalInfo.socials.github && (
-          <a href={personalInfo.socials.github} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-[#1e293b] text-white flex items-center justify-center hover:bg-[#60A5FA] transition-colors">
+          <a href={personalInfo.socials.github} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-[#1e293b] text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
             <Github size={14} />
           </a>
         )}
