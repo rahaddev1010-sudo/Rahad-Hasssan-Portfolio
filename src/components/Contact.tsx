@@ -50,10 +50,16 @@ export const Contact = () => {
             <span className="inline-block px-4 py-1.5 rounded-full border border-blue-100 text-blue-600 font-bold text-[11px] tracking-[0.2em] uppercase mb-6 shadow-sm bg-white">
               GET IN TOUCH
             </span>
-            <h2 className="text-[40px] md:text-[50px] font-black text-gray-900 leading-[1.1] mb-6 tracking-tight">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-[40px] md:text-[50px] font-black text-gray-900 leading-[1.1] mb-6 tracking-tight"
+            >
               Let's create something <br className="hidden md:block" />
               <span className="text-blue-600">extraordinary.</span>
-            </h2>
+            </motion.h2>
             <p className="text-[18px] text-gray-500 mb-10 max-w-md leading-relaxed">
               Have a project in mind, a question, or just want to say hello? 
               I'm currently available for freelance opportunities.

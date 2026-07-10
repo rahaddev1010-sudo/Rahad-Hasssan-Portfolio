@@ -66,9 +66,15 @@ export const Testimonials = () => {
                     <Quote className="w-6 h-6 fill-blue-600/20" />
                   </motion.div>
                 </div>
-                <h2 className="text-[36px] md:text-[46px] font-bold text-gray-900 leading-[1.1] mb-6">
+                <motion.h2 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="text-[36px] md:text-[46px] font-bold text-gray-900 leading-[1.1] mb-6"
+                >
                   Client <br /> Success Stories
-                </h2>
+                </motion.h2>
                 <p className="text-gray-600 text-[16px] mb-10 max-w-md mx-auto lg:mx-0">
                   Don't just take my word for it. Here's what my clients have to say about their experience working with me.
                 </p>

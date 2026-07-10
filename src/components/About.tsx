@@ -39,9 +39,15 @@ export const About = () => {
               ABOUT
             </span>
             
-            <h2 className="text-[32px] md:text-[40px] lg:text-[44px] font-bold text-gray-900 leading-[1.2] mb-4">
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-[32px] md:text-[40px] lg:text-[44px] font-bold text-gray-900 leading-[1.2] mb-4"
+            >
               A Developer Who Cares About the Details
-            </h2>
+            </motion.h2>
             
             <p className="text-[18px] md:text-[20px] text-gray-700 font-medium mb-6">
               With 3+ years of experience, I create digital experiences that matter.

@@ -99,3 +99,13 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--color-primary);
   color: var(--color-primary);
 }
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
