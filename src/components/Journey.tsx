@@ -83,7 +83,12 @@ export const Journey = () => {
                       {/* Left side logo/company area */}
                       <div className="md:w-[30%] shrink-0 flex items-center gap-4">
                         <div className="w-16 h-16 shrink-0 bg-white/60 border border-[#60A5FA]/20 shadow-sm flex items-center justify-center rounded-2xl text-gray-400 group-hover:scale-110 group-hover:border-transparent group-hover:bg-gradient-to-br group-hover:from-[#60A5FA] group-hover:via-indigo-500 group-hover:to-purple-500 group-hover:text-white transition-all duration-500">
-                          <item.icon size={26} strokeWidth={2} />
+                          <motion.div
+                            whileHover={{ scale: 1.2, rotate: 10 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                          >
+                            <item.icon size={26} strokeWidth={2} />
+                          </motion.div>
                         </div>
                         <h4 className="text-[18px] md:text-[22px] font-black text-gray-900 tracking-tight leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-600 group-hover:to-purple-600 transition-all duration-300">
                           {item.company}
@@ -133,12 +138,17 @@ export const Journey = () => {
                         {/* Left Side */}
                         <div className="md:w-[35%] shrink-0 flex items-center gap-5">
                           <div className="w-16 h-16 shrink-0 bg-white/60 border border-[#60A5FA]/20 shadow-sm flex items-center justify-center rounded-2xl group-hover:scale-110 group-hover:border-transparent group-hover:bg-gradient-to-br group-hover:from-[#60A5FA] group-hover:via-indigo-500 group-hover:to-purple-500 group-hover:text-white transition-all duration-500">
-                            {index === 0 && <Code2 className="w-7 h-7 text-blue-500 group-hover:text-white transition-colors" />}
-                            {index === 1 && <Layers className="w-7 h-7 text-purple-500 group-hover:text-white transition-colors" />}
-                            {index === 2 && <ShoppingCart className="w-7 h-7 text-pink-500 group-hover:text-white transition-colors" />}
-                            {index === 3 && <Sparkles className="w-7 h-7 text-amber-500 group-hover:text-white transition-colors" />}
-                            {index === 4 && <Rocket className="w-7 h-7 text-emerald-500 group-hover:text-white transition-colors" />}
-                            {index === 5 && <MonitorSmartphone className="w-7 h-7 text-indigo-500 group-hover:text-white transition-colors" />}
+                            <motion.div
+                              whileHover={{ scale: 1.2, rotate: -10 }}
+                              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                            >
+                              {index === 0 && <Code2 className="w-7 h-7 text-blue-500 group-hover:text-white transition-colors" />}
+                              {index === 1 && <Layers className="w-7 h-7 text-purple-500 group-hover:text-white transition-colors" />}
+                              {index === 2 && <ShoppingCart className="w-7 h-7 text-pink-500 group-hover:text-white transition-colors" />}
+                              {index === 3 && <Sparkles className="w-7 h-7 text-amber-500 group-hover:text-white transition-colors" />}
+                              {index === 4 && <Rocket className="w-7 h-7 text-emerald-500 group-hover:text-white transition-colors" />}
+                              {index === 5 && <MonitorSmartphone className="w-7 h-7 text-indigo-500 group-hover:text-white transition-colors" />}
+                            </motion.div>
                           </div>
                           <h4 className="text-[20px] md:text-[22px] font-black text-gray-900 tracking-tight leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-600 group-hover:to-blue-600 transition-all duration-300">
                             {skill.category}

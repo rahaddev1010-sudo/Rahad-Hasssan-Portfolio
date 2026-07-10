@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import { personalInfo, navLinks } from '../data';
 import { Github, Linkedin, Facebook, Instagram } from 'lucide-react';
 
@@ -13,10 +14,14 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-800/60 pb-10 mb-10">
           <div className="text-center md:text-left mb-8 md:mb-0">
             <a href="#home" className="text-3xl font-black text-white tracking-widest mb-2 flex items-center justify-center md:justify-start gap-3 hover:opacity-90 transition-opacity uppercase group inline-flex">
-              <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0F172A] text-xl shadow-[0_0_20px_rgb(255,255,255,0.15)] group-hover:shadow-[0_0_30px_rgb(255,255,255,0.3)] group-hover:-translate-y-0.5 transition-all duration-300 relative overflow-hidden border border-white/20">
+              <motion.div 
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.8 }}
+                className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0F172A] text-xl shadow-[0_0_20px_rgb(255,255,255,0.15)] group-hover:shadow-[0_0_30px_rgb(255,255,255,0.3)] group-hover:-translate-y-0.5 transition-all duration-300 relative overflow-hidden border border-white/20"
+              >
                 <div className="absolute inset-0 bg-gradient-to-tr from-gray-200 via-white to-white"></div>
                 <span className="relative z-10 font-bold">{personalInfo.name.charAt(0)}</span>
-              </div>
+              </motion.div>
               <span className="text-white drop-shadow-md">{personalInfo.name}</span>
               <span className="text-blue-400">.</span>
             </a>
@@ -24,18 +29,30 @@ export const Footer = () => {
           </div>
           
           <div className="flex space-x-4">
-            <a href={personalInfo.socials.github} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:shadow-[0_0_20px_rgb(37,99,235,0.4)] transition-all duration-300 group">
+            <motion.a 
+              whileHover={{ scale: 1.2, rotate: 10 }}
+              href={personalInfo.socials.github} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:shadow-[0_0_20px_rgb(37,99,235,0.4)] transition-all duration-300 group"
+            >
               <Github className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-            </a>
-            <a href={personalInfo.socials.linkedin} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:shadow-[0_0_20px_rgb(37,99,235,0.4)] transition-all duration-300 group">
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.2, rotate: -10 }}
+              href={personalInfo.socials.linkedin} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:shadow-[0_0_20px_rgb(37,99,235,0.4)] transition-all duration-300 group"
+            >
               <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-            </a>
-            <a href={personalInfo.socials.facebook} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:shadow-[0_0_20px_rgb(37,99,235,0.4)] transition-all duration-300 group">
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.2, rotate: 10 }}
+              href={personalInfo.socials.facebook} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:shadow-[0_0_20px_rgb(37,99,235,0.4)] transition-all duration-300 group"
+            >
               <Facebook className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-            </a>
-            <a href={personalInfo.socials.instagram} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:shadow-[0_0_20px_rgb(37,99,235,0.4)] transition-all duration-300 group">
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.2, rotate: -10 }}
+              href={personalInfo.socials.instagram} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:shadow-[0_0_20px_rgb(37,99,235,0.4)] transition-all duration-300 group"
+            >
               <Instagram className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-            </a>
+            </motion.a>
           </div>
         </div>
 

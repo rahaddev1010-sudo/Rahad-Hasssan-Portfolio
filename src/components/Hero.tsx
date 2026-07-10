@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Typewriter } from 'react-simple-typewriter';
 import { personalInfo } from '../data';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Zap, Sparkles } from 'lucide-react';
 
 
 export const Hero = () => {
@@ -12,9 +12,9 @@ export const Hero = () => {
       <div className="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-cyan-50 rounded-full blur-3xl -translate-x-1/3 translate-y-1/4" />
 
       <div className="max-w-[1240px] mx-auto px-6 w-full py-12 md:py-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
           
-          <div className="max-w-3xl">
+          <div className="max-w-3xl lg:col-span-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -70,8 +70,14 @@ export const Hero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 mb-14"
             >
-              <a href="#contact" className="bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white font-bold px-8 py-3.5 rounded-full hover:shadow-[0_8px_20px_rgb(96,165,250,0.3)] hover:scale-105 transition-all text-sm text-center">
-                Hire Me Today
+              <a href="#contact" className="bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white font-bold px-8 py-3.5 rounded-full hover:shadow-[0_8px_20px_rgb(96,165,250,0.3)] hover:scale-105 transition-all text-sm text-center flex items-center justify-center gap-2 group">
+                <span>Hire Me Today</span>
+                <motion.div
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </motion.div>
               </a>
               <a href="#work" className="bg-white border border-gray-100 text-gray-900 font-bold px-8 py-3.5 rounded-full hover:shadow-md transition-all text-sm text-center">
                 View Portfolio
@@ -104,22 +110,48 @@ export const Hero = () => {
             initial={{ opacity: 0, scale: 0.9, x: 20 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative mx-auto w-full max-w-[500px] lg:max-w-full"
+            className="relative mx-auto w-full max-w-[500px] lg:col-span-6 xl:scale-125 xl:ml-12"
           >
             {/* Background glowing blob */}
             <div className="absolute inset-0 bg-blue-100 rounded-full blur-[100px] transform -translate-y-10 opacity-60"></div>
             
             {/* Image Container */}
-            <div className="relative w-full aspect-square lg:aspect-[4/5] group bg-white/40 backdrop-blur-md rounded-[32px] p-6 shadow-xl border border-white/50 hover:-translate-y-2 transition-transform duration-500">
-              <div className="w-full h-full bg-white rounded-[24px] overflow-hidden relative">
+            <div className="relative w-full aspect-square group bg-transparent hover:-translate-y-2 transition-transform duration-500">
+              <div className="w-full h-full relative flex items-center justify-center p-8">
+                
+                {/* Image */}
                 <img
-                  src="/hero-image.jpg"
+                  src="/src/assets/images/rahad_original_user_image_1783684874672.jpg"
                   alt="Rahad Hassan"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-[90%] h-[90%] object-cover rounded-full shadow-[0_20px_50px_rgb(0,0,0,0.15)] ring-8 ring-white transition-transform duration-700 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
                 />
+                
+                {/* Premium Floating Badge */}
+                <motion.div 
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                  style={{ x: "-50%" }}
+                  className="absolute bottom-6 left-1/2 w-max bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl px-6 py-3.5 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.4)] border border-white/10 flex items-center gap-4 hover:border-white/20 hover:shadow-[0_25px_50px_rgba(0,0,0,0.5)] transition-all duration-700"
+                >
+                  <div className="relative flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden shadow-[inset_0_1px_3px_rgba(255,255,255,0.3)] bg-gradient-to-br from-blue-500/80 to-purple-600/80 border border-white/30">
+                    <span className="relative font-black text-white text-base tracking-tighter drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">AI</span>
+                  </div>
+                  <div className="flex flex-col justify-center pr-2">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <div className="relative flex h-1.5 w-1.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-300 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-400"></span>
+                      </div>
+                      <span className="text-[9px] font-bold tracking-[0.2em] text-white/90 uppercase drop-shadow-md">Premium Quality</span>
+                    </div>
+                    <span className="text-[17px] font-extrabold text-white leading-none tracking-wide whitespace-nowrap drop-shadow-lg">
+                      AI to WordPress
+                    </span>
+                  </div>
+                </motion.div>
               </div>
             </div>
-            
           </motion.div>
 
         </div>

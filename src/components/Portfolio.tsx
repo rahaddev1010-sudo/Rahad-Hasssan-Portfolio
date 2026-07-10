@@ -143,7 +143,12 @@ export const Portfolio = () => {
                     <p className="text-gray-500 text-[14px] leading-relaxed line-clamp-2 pr-4">{project.description}</p>
                   </div>
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:shadow-[0_8px_20px_rgb(96,165,250,0.4)] transition-all">
-                    <ArrowUpRight className="w-5 h-5" />
+                    <motion.div
+                      whileHover={{ x: 3, y: -3 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                      <ArrowUpRight className="w-5 h-5" />
+                    </motion.div>
                   </a>
                 </div>
               </motion.div>

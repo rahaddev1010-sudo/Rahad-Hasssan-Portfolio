@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { skills, personalInfo } from '../data';
+import { Phone, Mail } from 'lucide-react';
 
 export const About = () => {
   return (
@@ -13,30 +14,16 @@ export const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-6 relative scale-95"
           >
-            {/* Blue Blob Background */}
-            <div className="absolute top-0 left-0 w-32 h-32 bg-blue-600 rounded-br-[40px] rounded-tl-[40px] z-0 -translate-x-4 -translate-y-4"></div>
-            
-            {/* Image Card */}
-            <div className="relative bg-white rounded-[40px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] overflow-hidden z-10 flex justify-center items-center border border-gray-50/50 aspect-square group">
+            {/* Image */}
+            <div className="relative z-10 flex justify-center items-center aspect-square group rounded-full shadow-2xl">
               <img 
-                src="/about-image.jpg" 
+                src="/src/assets/images/rahad_original_user_image_1783684874672.jpg" 
                 alt={personalInfo.name} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-105"
+                referrerPolicy="no-referrer"
               />
-            </div>
-            
-            {/* Badge */}
-            <div className="absolute -right-6 bottom-16 z-20 w-36 h-36 bg-white rounded-full shadow-[0_10px_30px_rgb(96,165,250,0.4)] overflow-hidden">
-              {/* Spinning gradient border */}
-              <div className="absolute inset-[-50%] bg-[conic-gradient(from_0deg,transparent_0_120deg,#38bdf8,#818cf8,#c084fc,#38bdf8)] animate-[spin_2s_linear_infinite]"></div>
-              
-              {/* Inner Content */}
-              <div className="absolute inset-[5px] bg-gradient-to-br from-[#60A5FA] via-indigo-500 to-purple-500 text-white rounded-full flex flex-col items-center justify-center shadow-inner z-10">
-                <div className="text-[36px] font-black leading-none mb-1 drop-shadow-md">3+</div>
-                <div className="text-[12px] text-center leading-[1.2] font-bold tracking-wider uppercase opacity-90">Years of<br/>Experience</div>
-              </div>
             </div>
           </motion.div>
 
@@ -46,7 +33,7 @@ export const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7"
+            className="lg:col-span-6 lg:pl-8"
           >
             <span className="inline-block px-4 py-1.5 rounded-full border border-gray-200 text-gray-600 font-bold text-[11px] tracking-[0.2em] uppercase mb-6 shadow-sm bg-white">
               ABOUT
@@ -74,13 +61,33 @@ export const About = () => {
 
             {/* Contact Info Boxes */}
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
-              <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-md transition-shadow">
-                <div className="text-[11px] font-bold text-gray-900 uppercase tracking-widest mb-1">PHONE</div>
-                <a href={`tel:${personalInfo.phone}`} className="text-gray-600 text-sm hover:text-primary transition-colors">{personalInfo.phone}</a>
+              <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-md transition-shadow flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <Phone className="w-5 h-5 text-blue-600" />
+                  </motion.div>
+                </div>
+                <div>
+                  <div className="text-[11px] font-bold text-gray-900 uppercase tracking-widest mb-0.5">PHONE</div>
+                  <a href={`tel:${personalInfo.phone}`} className="text-gray-600 text-sm hover:text-primary transition-colors">{personalInfo.phone}</a>
+                </div>
               </div>
-              <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-md transition-shadow">
-                <div className="text-[11px] font-bold text-gray-900 uppercase tracking-widest mb-1">EMAIL</div>
-                <a href={`mailto:${personalInfo.email}`} className="text-gray-600 text-sm hover:text-primary transition-colors">{personalInfo.email}</a>
+              <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-md transition-shadow flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center shrink-0">
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: -10 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <Mail className="w-5 h-5 text-purple-600" />
+                  </motion.div>
+                </div>
+                <div>
+                  <div className="text-[11px] font-bold text-gray-900 uppercase tracking-widest mb-0.5">EMAIL</div>
+                  <a href={`mailto:${personalInfo.email}`} className="text-gray-600 text-sm hover:text-primary transition-colors">{personalInfo.email}</a>
+                </div>
               </div>
             </div>
           </motion.div>

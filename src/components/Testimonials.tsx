@@ -58,8 +58,13 @@ export const Testimonials = () => {
               
               {/* Left Side: Header & Controls */}
               <div className="w-full lg:w-[40%] text-center lg:text-left">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 mb-6 backdrop-blur-sm border border-blue-200">
-                  <Quote className="w-6 h-6 fill-blue-600/20" />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 mb-6 backdrop-blur-sm border border-blue-200 overflow-hidden">
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <Quote className="w-6 h-6 fill-blue-600/20" />
+                  </motion.div>
                 </div>
                 <h2 className="text-[36px] md:text-[46px] font-bold text-gray-900 leading-[1.1] mb-6">
                   Client <br /> Success Stories
@@ -137,8 +142,13 @@ export const Testimonials = () => {
             {/* Background Glow */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-sky-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
             <div className="relative z-10 flex flex-col gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-50 to-blue-50 text-sky-500 flex items-center justify-center border border-sky-100/50 shadow-sm group-hover:scale-110 group-hover:from-sky-500 group-hover:to-blue-600 group-hover:text-white transition-all duration-500">
-                <CheckCircle2 className="w-8 h-8" />
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-50 to-blue-50 text-sky-500 flex items-center justify-center border border-sky-100/50 shadow-sm group-hover:scale-110 group-hover:from-sky-500 group-hover:to-blue-600 group-hover:text-white transition-all duration-500 overflow-hidden">
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: -15 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <CheckCircle2 className="w-8 h-8" />
+                </motion.div>
               </div>
               <div>
                 <h5 className="font-black text-gray-900 text-[24px] tracking-tight mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-600 group-hover:to-blue-600 transition-all">50+ Reviews</h5>
@@ -151,8 +161,13 @@ export const Testimonials = () => {
             {/* Background Glow */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-purple-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
             <div className="relative z-10 flex flex-col gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-50 to-fuchsia-50 text-purple-500 flex items-center justify-center border border-purple-100/50 shadow-sm group-hover:scale-110 group-hover:from-purple-500 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500">
-                <Trophy className="w-8 h-8" />
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-50 to-fuchsia-50 text-purple-500 flex items-center justify-center border border-purple-100/50 shadow-sm group-hover:scale-110 group-hover:from-purple-500 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500 overflow-hidden">
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: 15 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <Trophy className="w-8 h-8" />
+                </motion.div>
               </div>
               <div>
                 <h5 className="font-black text-gray-900 text-[24px] tracking-tight mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-fuchsia-600 transition-all">Top Rated</h5>
@@ -165,8 +180,13 @@ export const Testimonials = () => {
             {/* Background Glow */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-pink-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
             <div className="relative z-10 flex flex-col gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-50 text-pink-500 flex items-center justify-center border border-pink-100/50 shadow-sm group-hover:scale-110 group-hover:from-pink-500 group-hover:to-rose-600 group-hover:text-white transition-all duration-500">
-                <Globe2 className="w-8 h-8" />
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-50 text-pink-500 flex items-center justify-center border border-pink-100/50 shadow-sm group-hover:scale-110 group-hover:from-pink-500 group-hover:to-rose-600 group-hover:text-white transition-all duration-500 overflow-hidden">
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: -15 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <Globe2 className="w-8 h-8" />
+                </motion.div>
               </div>
               <div>
                 <h5 className="font-black text-gray-900 text-[24px] tracking-tight mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-600 group-hover:to-rose-600 transition-all">Worldwide</h5>

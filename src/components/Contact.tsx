@@ -62,7 +62,12 @@ export const Contact = () => {
             <div className="space-y-6">
               <a href={`mailto:${personalInfo.email}`} className="group flex items-center p-6 bg-white rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-blue-100 hover:-translate-y-1 transition-all duration-300">
                 <div className="w-14 h-14 bg-blue-50 group-hover:bg-blue-600 rounded-2xl flex items-center justify-center mr-6 shrink-0 transition-colors">
-                  <Mail className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <Mail className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+                  </motion.div>
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Drop a Line</h4>
@@ -74,7 +79,12 @@ export const Contact = () => {
               
               <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} className="group flex items-center p-6 bg-white rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-blue-100 hover:-translate-y-1 transition-all duration-300">
                 <div className="w-14 h-14 bg-blue-50 group-hover:bg-blue-600 rounded-2xl flex items-center justify-center mr-6 shrink-0 transition-colors">
-                  <Phone className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: -10 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <Phone className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+                  </motion.div>
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Call Me</h4>
@@ -177,7 +187,14 @@ export const Contact = () => {
                 {/* Button Shine Effect */}
                 <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
                 <span className="relative z-10 text-[16px]">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
-                {!isSubmitting && <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />}
+                {!isSubmitting && (
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                  >
+                    <ArrowRight className="w-5 h-5 relative z-10" />
+                  </motion.div>
+                )}
               </button>
             </form>
           </motion.div>

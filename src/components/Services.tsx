@@ -16,8 +16,13 @@ export const Services = () => {
               className="card-shadow p-6 md:p-8 flex flex-col items-start group h-full"
             >
               <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center">
-                  <service.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center overflow-hidden">
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 15 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <service.icon className="w-6 h-6 text-white" />
+                  </motion.div>
                 </div>
               </div>
               <h3 className="text-xl md:text-[22px] font-semibold text-secondary mb-4 leading-snug">{service.title}</h3>
