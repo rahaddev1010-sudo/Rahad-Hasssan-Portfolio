@@ -16,7 +16,7 @@ import {
 
 export const personalInfo = {
   name: "Rahad Hassan",
-  role: "Web Developer & Designer",
+  role: "Professional WordPress Expert",
   email: "rahadpcc@gmail.com",
   phone: "+880 135021488",
   location: "Bangladesh (Remote Worldwide)",

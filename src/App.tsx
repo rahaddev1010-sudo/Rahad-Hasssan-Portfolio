@@ -1,6 +1,5 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { RunningBanner } from './components/RunningBanner';
 import { Services } from './components/Services';
 import { About } from './components/About';
 import { Journey } from './components/Journey';
@@ -16,7 +15,6 @@ export default function App() {
       <main>
         <div className="bg-gradient-to-r from-blue-100/90 via-sky-50/80 to-white">
           <Hero />
-          <RunningBanner />
           <Services />
           <About />
         </div>
