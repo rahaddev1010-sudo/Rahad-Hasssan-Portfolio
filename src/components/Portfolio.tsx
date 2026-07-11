@@ -33,9 +33,15 @@ export const Portfolio = () => {
             <span className="inline-block px-4 py-1.5 rounded-full border border-gray-200 text-gray-600 font-bold text-[11px] tracking-[0.2em] uppercase mb-6 shadow-sm bg-white">
               PORTFOLIO
             </span>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-gray-900 leading-[1.2]">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-[32px] md:text-[40px] font-bold text-gray-900 leading-[1.2]"
+            >
               Featured Client Work
-            </h2>
+            </motion.h2>
           </motion.div>
 
           <motion.div 
@@ -69,10 +75,11 @@ export const Portfolio = () => {
             {visibleProjects.map((project, index) => (
               <motion.div
                 layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
                 key={project.title}
                 className="group relative flex flex-col"
               >

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { skills, personalInfo } from '../data';
 import { Phone, Mail } from 'lucide-react';
+import rahadUserImage from '../assets/images/rahad_original_user_image_1783684874672.jpg';
 
 export const About = () => {
   return (
@@ -10,21 +11,27 @@ export const About = () => {
           
           {/* Left: Image Column */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.8, x: -30 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-6 relative scale-95"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="lg:col-span-6 relative"
           >
             {/* Image */}
-            <div className="relative z-10 flex justify-center items-center aspect-square group rounded-full shadow-2xl">
+            <div className="relative z-10 flex justify-center items-center aspect-square group rounded-full shadow-2xl overflow-hidden">
               <img 
-                src="/src/assets/images/rahad_original_user_image_1783684874672.jpg" 
+                src={rahadUserImage} 
                 alt={personalInfo.name} 
-                className="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
             </div>
+            {/* Decorative element */}
+            <motion.div 
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="absolute -inset-4 border-2 border-dashed border-blue-200 rounded-full opacity-50 z-0"
+            />
           </motion.div>
 
           {/* Right: Content Column */}

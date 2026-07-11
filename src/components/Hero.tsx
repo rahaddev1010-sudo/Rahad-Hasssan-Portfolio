@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Typewriter } from 'react-simple-typewriter';
 import { personalInfo } from '../data';
 import { ArrowRight, Zap, Sparkles } from 'lucide-react';
+import rahadUserImage from '../assets/images/rahad_original_user_image_1783684874672.jpg';
 
 
 export const Hero = () => {
@@ -121,7 +122,7 @@ export const Hero = () => {
                 
                 {/* Image */}
                 <img
-                  src="/src/assets/images/rahad_original_user_image_1783684874672.jpg"
+                  src={rahadUserImage}
                   alt="Rahad Hassan"
                   className="w-[90%] h-[90%] object-cover rounded-full shadow-[0_20px_50px_rgb(0,0,0,0.15)] ring-8 ring-white transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"

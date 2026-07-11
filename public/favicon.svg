@@ -1,26 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <!-- Define a rich, high-contrast gradient matching the app's primary palette -->
-    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#60A5FA" />
-      <stop offset="50%" stop-color="#6366F1" />
-      <stop offset="100%" stop-color="#A855F7" />
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#6366F1" />
     </linearGradient>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#4F46E5" flood-opacity="0.25"/>
-    </filter>
   </defs>
-
-  <!-- Smooth outer squircle with a modern premium feel -->
-  <rect x="32" y="32" width="448" height="448" rx="120" fill="url(#glowGrad)" filter="url(#shadow)" />
-
-  <!-- Inner circle for framing the monogram -->
-  <circle cx="256" cy="256" r="150" fill="#0F172A" opacity="0.9" />
-
-  <!-- A highly styled, modern monogram "W" representing professional WordPress craftsmanship with elegant vector shapes -->
-  <g transform="translate(141, 141)" fill="#FFFFFF">
-    <path d="M 27.5 45 L 68 185 L 105 185 L 140 75 L 175 185 L 212 185 L 252.5 45 L 215 45 L 192 140 L 157.5 45 L 122.5 45 L 88 140 L 65 45 Z" />
-    <!-- Glowing Accent Sparkle in the top right corner of the icon -->
-    <path d="M 205 -15 C 205 -5, 215 5, 225 5 C 215 5, 205 15, 205 25 C 205 15, 195 5, 185 5 C 195 5, 205 -5, 205 -15 Z" fill="#60A5FA" />
-  </g>
+  <!-- Professional circular base with a vibrant blue-indigo gradient -->
+  <circle cx="256" cy="256" r="240" fill="url(#brandGradient)" />
+  <!-- Clean, bold Monogram "RH" with improved centering and weight -->
+  <text x="50%" y="52%" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="220" fill="#ffffff" text-anchor="middle" dominant-baseline="central">RH</text>
+  <!-- Small accent dot for a polished, modern finish -->
+  <circle cx="256" cy="410" r="12" fill="#ffffff" />
 </svg>
