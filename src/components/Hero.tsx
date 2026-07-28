@@ -18,8 +18,9 @@ export const Hero = () => {
           <div className="max-w-3xl lg:col-span-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
+              viewport={{ once: false, amount: 0.2 }}
               className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-5 py-2.5 mb-8 shadow-sm"
             >
               <span className="relative flex h-2.5 w-2.5 mr-1">
@@ -31,8 +32,9 @@ export const Hero = () => {
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: false, amount: 0.2 }}
               className="text-[34px] md:text-[46px] lg:text-[54px] leading-[1.1] font-black text-[#0F172A] mb-6 tracking-[-0.02em] uppercase"
             >
               <span className="block mb-2">Creating High-Converting</span>
@@ -58,8 +60,9 @@ export const Hero = () => {
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: false, amount: 0.2 }}
               className="text-lg md:text-[20px] text-gray-600 mb-10 max-w-xl leading-relaxed"
             >
               I am a Premium WordPress Expert & Automation Strategist specializing in bespoke website development, scalable e-commerce, and AI-driven solutions to help your brand dominate online.
@@ -67,8 +70,9 @@ export const Hero = () => {
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: false, amount: 0.2 }}
               className="flex flex-col sm:flex-row gap-4 mb-14"
             >
               <a href="#contact" className="bg-gradient-to-r from-[#60A5FA] via-indigo-500 to-purple-500 text-white font-bold px-8 py-3.5 rounded-full hover:shadow-[0_8px_20px_rgb(96,165,250,0.3)] hover:scale-105 transition-all text-sm text-center flex items-center justify-center gap-2 group">
@@ -87,8 +91,9 @@ export const Hero = () => {
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: false, amount: 0.2 }}
               className="flex gap-4 max-w-[600px]"
             >
               <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all text-center">
@@ -109,8 +114,9 @@ export const Hero = () => {
           {/* Right Column - Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, x: 20 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
             className="relative mx-auto w-full max-w-[500px] lg:col-span-6 xl:scale-125 xl:ml-12"
           >
             {/* Background glowing blob */}

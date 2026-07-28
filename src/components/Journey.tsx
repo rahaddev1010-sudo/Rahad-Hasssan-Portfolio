@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { GraduationCap, Code2, Sparkles, BookOpen, Layers, ShoppingCart, Rocket, MonitorSmartphone } from 'lucide-react';
 import { education, skills } from '../data';
+import { TypingHeading } from './TypingHeading';
 
 export const Journey = () => {
   const [activeTab, setActiveTab] = useState<'education' | 'skills'>('education');
@@ -20,15 +21,10 @@ export const Journey = () => {
           <span className="inline-block px-4 py-1.5 rounded-full border border-sky-200 text-blue-600 font-bold text-[11px] tracking-[0.2em] uppercase mb-4 shadow-sm bg-sky-50/50">
             JOURNEY
           </span>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <TypingHeading 
+            text="Professional Journey & Expertise"
             className="text-[32px] md:text-[40px] font-bold text-gray-900 leading-[1.2] mb-8"
-          >
-            Professional Journey & Expertise
-          </motion.h2>
+          />
 
           {/* Tabs */}
           <div className="inline-flex relative bg-white/60 backdrop-blur-md rounded-full p-2 border border-gray-200 shadow-sm ring-1 ring-black/5">
@@ -125,58 +121,63 @@ export const Journey = () => {
                   initial="hidden"
                   animate="show"
                   exit="hidden"
-                  className="space-y-6"
+                  className="space-y-4"
                 >
-                  {skills.map((skill, index) => (
-                    <motion.div 
-                      key={index} 
-                      variants={{
-                        hidden: { opacity: 0, y: 20 },
-                        show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
-                      }}
-                      className="group bg-gradient-to-br from-[#60A5FA]/10 via-white to-purple-500/10 border border-[#60A5FA]/20 rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(96,165,250,0.08)] hover:shadow-[0_12px_40px_rgb(96,165,250,0.15)] hover:-translate-y-1 transition-all duration-400 relative"
-                    >
-                      {/* Background glow effect */}
-                      <div className="absolute -right-20 -top-20 w-48 h-48 bg-gradient-to-bl from-sky-100/50 via-blue-100/30 to-transparent rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
-                      
-                      {/* Content Row */}
-                      <div className="flex flex-col md:flex-row gap-6 items-start md:items-center px-8 py-8 relative z-10">
-                        {/* Left Side */}
-                        <div className="md:w-[35%] shrink-0 flex items-center gap-5">
-                          <div className="w-16 h-16 shrink-0 bg-white/60 border border-[#60A5FA]/20 shadow-sm flex items-center justify-center rounded-2xl group-hover:scale-110 group-hover:border-transparent group-hover:bg-gradient-to-br group-hover:from-[#60A5FA] group-hover:via-indigo-500 group-hover:to-purple-500 group-hover:text-white transition-all duration-500">
-                            <motion.div
-                              whileHover={{ scale: 1.2, rotate: -10 }}
-                              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                            >
-                              {index === 0 && <Code2 className="w-7 h-7 text-blue-500 group-hover:text-white transition-colors" />}
-                              {index === 1 && <Layers className="w-7 h-7 text-purple-500 group-hover:text-white transition-colors" />}
-                              {index === 2 && <ShoppingCart className="w-7 h-7 text-pink-500 group-hover:text-white transition-colors" />}
-                              {index === 3 && <Sparkles className="w-7 h-7 text-amber-500 group-hover:text-white transition-colors" />}
-                              {index === 4 && <Rocket className="w-7 h-7 text-emerald-500 group-hover:text-white transition-colors" />}
-                              {index === 5 && <MonitorSmartphone className="w-7 h-7 text-indigo-500 group-hover:text-white transition-colors" />}
-                            </motion.div>
-                          </div>
-                          <h4 className="text-[20px] md:text-[22px] font-black text-gray-900 tracking-tight leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-600 group-hover:to-blue-600 transition-all duration-300">
-                            {skill.category}
-                          </h4>
+                  {skills.map((skill, index) => {
+                    const colorMap: Record<string, { bg: string, text: string, border: string, badgeBg: string, badgeText: string, hoverBorder: string }> = {
+                      blue: { bg: 'bg-blue-50/50', text: 'text-blue-500', border: 'border-blue-100', badgeBg: 'bg-blue-100/50', badgeText: 'text-blue-600', hoverBorder: 'group-hover:border-blue-200' },
+                      purple: { bg: 'bg-purple-50/50', text: 'text-purple-500', border: 'border-purple-100', badgeBg: 'bg-purple-100/50', badgeText: 'text-purple-600', hoverBorder: 'group-hover:border-purple-200' },
+                      indigo: { bg: 'bg-indigo-50/50', text: 'text-indigo-500', border: 'border-indigo-100', badgeBg: 'bg-indigo-100/50', badgeText: 'text-indigo-600', hoverBorder: 'group-hover:border-indigo-200' },
+                      pink: { bg: 'bg-pink-50/50', text: 'text-pink-500', border: 'border-pink-100', badgeBg: 'bg-pink-100/50', badgeText: 'text-pink-600', hoverBorder: 'group-hover:border-pink-200' },
+                      emerald: { bg: 'bg-emerald-50/50', text: 'text-emerald-500', border: 'border-emerald-100', badgeBg: 'bg-emerald-100/50', badgeText: 'text-emerald-600', hoverBorder: 'group-hover:border-emerald-200' },
+                      amber: { bg: 'bg-amber-50/50', text: 'text-amber-500', border: 'border-amber-100', badgeBg: 'bg-amber-100/50', badgeText: 'text-amber-600', hoverBorder: 'group-hover:border-amber-200' },
+                    };
+                    const c = colorMap[skill.color] || colorMap.blue;
+                    
+                    return (
+                      <motion.div 
+                        key={index} 
+                        variants={{
+                          hidden: { opacity: 0, y: 15 },
+                          show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
+                        }}
+                        className={`group bg-white/80 backdrop-blur-md border border-gray-100 rounded-[20px] p-6 shadow-sm hover:shadow-md transition-all duration-300 ${c.hoverBorder} relative overflow-hidden flex flex-col md:flex-row gap-5 items-start`}
+                      >
+                        {/* Soft background glow on hover */}
+                        <div className={`absolute -inset-4 bg-gradient-to-br ${c.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none blur-2xl z-0`} />
+
+                        {/* Icon */}
+                        <div className={`relative z-10 w-12 h-12 shrink-0 rounded-[14px] flex items-center justify-center ${c.bg} border ${c.border} group-hover:scale-105 transition-transform duration-300`}>
+                          <skill.icon className={`w-6 h-6 ${c.text}`} />
                         </div>
 
-                        {/* Right Side */}
-                        <div className="md:w-[65%] border-l-0 md:border-l-2 border-gray-100 group-hover:border-gradient-to-b group-hover:border-transparent group-hover:bg-gradient-to-b group-hover:from-sky-500 group-hover:to-blue-600 group-hover:bg-[length:2px_100%] group-hover:bg-no-repeat group-hover:bg-left pt-4 md:pt-0 pl-0 md:pl-8 transition-all duration-300">
-                          <div className="flex flex-wrap gap-2.5">
-                            {skill.items.split(', ').map((item, idx) => (
+                        {/* Content */}
+                        <div className="relative z-10 flex-grow">
+                          <div className="flex flex-wrap items-center gap-3 mb-2">
+                            <h4 className="text-[17px] md:text-[19px] font-bold text-gray-900 leading-tight">
+                              {skill.title}
+                            </h4>
+                          </div>
+                          
+                          <p className="text-[14px] text-gray-500 mb-4 leading-relaxed">
+                            {skill.description}
+                          </p>
+
+                          {/* Tags */}
+                          <div className="flex flex-wrap gap-2">
+                            {skill.tags.map((tag, idx) => (
                               <span 
                                 key={idx}
-                                className="px-4 py-2 rounded-xl bg-white/50 border border-[#60A5FA]/20 text-[13.5px] font-semibold text-gray-600 hover:bg-gradient-to-r hover:from-[#60A5FA]/10 hover:to-purple-500/10 hover:border-[#60A5FA]/50 hover:text-indigo-600 hover:shadow-[0_4px_12px_rgb(96,165,250,0.15)] hover:-translate-y-0.5 transition-all duration-300 cursor-default"
+                                className="px-3 py-1.5 rounded-full bg-gray-50 border border-gray-100 text-[12.5px] font-medium text-gray-600 hover:bg-white hover:border-gray-200 hover:text-gray-900 transition-colors duration-200 cursor-default shadow-sm"
                               >
-                                {item}
+                                {tag}
                               </span>
                             ))}
                           </div>
                         </div>
-                      </div>
-                    </motion.div>
-                  ))}
+                      </motion.div>
+                    );
+                  })}
                 </motion.div>
             )}
           </AnimatePresence>

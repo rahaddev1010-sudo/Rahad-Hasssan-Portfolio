@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { projects } from '../data';
 import { ArrowUpRight } from 'lucide-react';
+import { TypingHeading } from './TypingHeading';
 
 const tabs = ['All', 'WordPress', 'Elementor', 'WooCommerce'];
 
@@ -28,26 +29,21 @@ export const Portfolio = () => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <span className="inline-block px-4 py-1.5 rounded-full border border-gray-200 text-gray-600 font-bold text-[11px] tracking-[0.2em] uppercase mb-6 shadow-sm bg-white">
               PORTFOLIO
             </span>
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+            <TypingHeading 
+              text="Featured Client Work"
               className="text-[32px] md:text-[40px] font-bold text-gray-900 leading-[1.2]"
-            >
-              Featured Client Work
-            </motion.h2>
+            />
           </motion.div>
 
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="flex flex-wrap gap-1.5 p-1.5 bg-sky-50/60 rounded-full border border-sky-100"
           >
             {tabs.map(tab => (
@@ -77,7 +73,7 @@ export const Portfolio = () => {
                 layout
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 key={project.title}

@@ -3,7 +3,7 @@ import { skills } from '../data';
 export const RunningBanner = () => {
   // Extract all items into a single array
   const allSkills = skills.reduce((acc, skill) => {
-    return [...acc, ...skill.items.split(', ')];
+    return [...acc, ...(skill.tags || [])];
   }, [] as string[]);
 
   // Duplicate for seamless loop

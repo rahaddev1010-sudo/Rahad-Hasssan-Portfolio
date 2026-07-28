@@ -2,6 +2,7 @@ import { useState, FormEvent } from 'react';
 import { motion } from 'motion/react';
 import { personalInfo } from '../data';
 import { Mail, Phone, MapPin, Send, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { TypingHeading } from './TypingHeading';
 
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,22 +45,19 @@ export const Contact = () => {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-4 py-1.5 rounded-full border border-blue-100 text-blue-600 font-bold text-[11px] tracking-[0.2em] uppercase mb-6 shadow-sm bg-white">
               GET IN TOUCH
             </span>
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+            <TypingHeading 
+              parts={[
+                { text: "Let's create something \n" },
+                { text: "extraordinary.", className: "text-blue-600" }
+              ]}
               className="text-[40px] md:text-[50px] font-black text-gray-900 leading-[1.1] mb-6 tracking-tight"
-            >
-              Let's create something <br className="hidden md:block" />
-              <span className="text-blue-600">extraordinary.</span>
-            </motion.h2>
+            />
             <p className="text-[18px] text-gray-500 mb-10 max-w-md leading-relaxed">
               Have a project in mind, a question, or just want to say hello? 
               I'm currently available for freelance opportunities.
@@ -105,7 +103,7 @@ export const Contact = () => {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6 }}
             className="bg-white/70 backdrop-blur-xl rounded-[40px] p-8 md:p-12 shadow-[0_20px_60px_rgb(0,0,0,0.05)] border border-white relative overflow-hidden"
           >
