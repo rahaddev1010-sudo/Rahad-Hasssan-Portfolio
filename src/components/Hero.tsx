@@ -94,19 +94,19 @@ export const Hero = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: false, amount: 0.2 }}
-              className="flex gap-4 max-w-[600px]"
+              className="flex flex-wrap sm:flex-nowrap gap-4 max-w-[600px]"
             >
-              <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all text-center">
-                <div className="text-3xl font-black text-gray-900 mb-2">3+</div>
-                <div className="text-[11px] font-semibold text-gray-500 uppercase tracking-widest">Years of Experience</div>
+              <div className="flex-1 w-[45%] sm:w-auto bg-white border border-gray-100 rounded-2xl p-4 sm:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all text-center">
+                <div className="text-2xl sm:text-3xl font-black text-gray-900 mb-1 sm:mb-2">3+</div>
+                <div className="text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-widest">Years of Experience</div>
               </div>
-              <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all text-center">
-                <div className="text-3xl font-black text-gray-900 mb-2">50+</div>
-                <div className="text-[11px] font-semibold text-gray-500 uppercase tracking-widest">Projects Completed</div>
+              <div className="flex-1 w-[45%] sm:w-auto bg-white border border-gray-100 rounded-2xl p-4 sm:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all text-center">
+                <div className="text-2xl sm:text-3xl font-black text-gray-900 mb-1 sm:mb-2">50+</div>
+                <div className="text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-widest">Projects Completed</div>
               </div>
-              <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all text-center">
-                <div className="text-3xl font-black text-gray-900 mb-2">98%</div>
-                <div className="text-[11px] font-semibold text-gray-500 uppercase tracking-widest">Client Satisfaction</div>
+              <div className="flex-[2] sm:flex-1 w-full sm:w-auto bg-white border border-gray-100 rounded-2xl p-4 sm:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all text-center">
+                <div className="text-2xl sm:text-3xl font-black text-gray-900 mb-1 sm:mb-2">98%</div>
+                <div className="text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-widest">Client Satisfaction</div>
               </div>
             </motion.div>
           </div>
