@@ -166,11 +166,11 @@ export const skills = [
 
 export const projects = [
   {
-    title: "Apex Ecom Pro",
-    tag: "eCommerce Development",
-    description: "High-performance eCommerce storefront optimized for conversions and seamless user journeys.",
-    image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=2664&auto=format&fit=crop",
-    link: "https://apex-ecom-pro.vercel.app/"
+    title: "Central Surplus eCommerce",
+    tag: "WooCommerce & CRO",
+    description: "Enhanced eCommerce performance and conversion optimization for an online surplus store.",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2574&auto=format&fit=crop",
+    link: "https://yoursitehub.com/Central-Surplus-Ecommerce-Case-Study/"
   },
   {
     title: "Cookies & Cream Digital Menu",
@@ -194,7 +194,7 @@ export const projects = [
     link: "https://www.you-coaching.ch/"
   },
   {
-    title: "VT1 Construction & Engineering",
+    title: "Roofing to chimneys,",
     tag: "WordPress",
     description: "Professional construction, contracting, and building company website.",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2670&auto=format&fit=crop",
