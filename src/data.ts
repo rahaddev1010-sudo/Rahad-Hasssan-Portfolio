@@ -166,11 +166,11 @@ export const skills = [
 
 export const projects = [
   {
-    title: "Central Surplus eCommerce",
-    tag: "WooCommerce & CRO",
-    description: "Enhanced eCommerce performance and conversion optimization for an online surplus store.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2574&auto=format&fit=crop",
-    link: "https://yoursitehub.com/Central-Surplus-Ecommerce-Case-Study/"
+    title: "Apex Ecom Pro",
+    tag: "eCommerce Development",
+    description: "High-performance eCommerce storefront optimized for conversions and seamless user journeys.",
+    image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=2664&auto=format&fit=crop",
+    link: "https://apex-ecom-pro.vercel.app/"
   },
   {
     title: "Cookies & Cream Digital Menu",
@@ -276,13 +276,6 @@ export const projects = [
     description: "Comprehensive dental care portal emphasizing a healthier lifestyle through oral hygiene.",
     image: "https://images.unsplash.com/photo-1598256989800-fea5ce5146f2?q=80&w=2674&auto=format&fit=crop",
     link: "https://dental-care-for-a-healthier.vercel.app/"
-  },
-  {
-    title: "Apex Ecom Pro",
-    tag: "eCommerce Development",
-    description: "High-performance eCommerce storefront optimized for conversions and seamless user journeys.",
-    image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=2664&auto=format&fit=crop",
-    link: "https://apex-ecom-pro.vercel.app/"
   }
 ];
 
