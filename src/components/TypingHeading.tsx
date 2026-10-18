@@ -70,7 +70,7 @@ export const TypingHeading = ({ text, parts, className }: TypingHeadingProps) =>
     >
       {allChars.map((item) => {
         if (item.char === '\n') {
-          return <br key={item.key} className="hidden md:block" />;
+          return <br key={item.key} className="block" />;
         }
         return (
           <motion.span variants={child} key={item.key} className={`inline-block ${item.charClassName || ''}`}>

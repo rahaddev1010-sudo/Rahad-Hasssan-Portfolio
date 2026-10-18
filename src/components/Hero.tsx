@@ -12,8 +12,8 @@ export const Hero = () => {
       <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl translate-x-1/3 -translate-y-1/4" />
       <div className="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-cyan-50 rounded-full blur-3xl -translate-x-1/3 translate-y-1/4" />
 
-      <div className="max-w-[1240px] mx-auto px-6 w-full py-12 md:py-24">
-        <div className="grid lg:grid-cols-12 gap-16 items-center">
+      <div className="max-w-[1240px] mx-auto px-6 w-full py-8 md:py-14">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           <div className="max-w-3xl lg:col-span-6">
             <motion.div
@@ -120,37 +120,50 @@ export const Hero = () => {
             className="relative mx-auto w-full max-w-[500px] lg:col-span-6 xl:scale-125 xl:ml-12"
           >
             {/* Background glowing blob */}
-            <div className="absolute inset-0 bg-blue-100 rounded-full blur-[100px] transform -translate-y-10 opacity-60"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-300/30 via-indigo-300/20 to-purple-300/30 rounded-full blur-[100px] transform -translate-y-10 opacity-70 animate-pulse-glow"></div>
             
-            {/* Image Container */}
+            {/* Image Container with Animated Border */}
             <div className="relative w-full aspect-square group bg-transparent hover:-translate-y-2 transition-transform duration-500">
-              <div className="w-full h-full relative flex items-center justify-center p-8">
+              <div className="w-full h-full relative flex items-center justify-center p-6">
                 
+                {/* 4-Corner Pulsing Tech Glows */}
+                <div className="absolute top-4 left-4 w-12 h-12 bg-cyan-400/40 rounded-full blur-xl animate-pulse"></div>
+                <div className="absolute top-4 right-4 w-12 h-12 bg-purple-400/40 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute bottom-4 left-4 w-12 h-12 bg-blue-400/40 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute bottom-4 right-4 w-12 h-12 bg-pink-400/40 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+
+                {/* Animated Rotating Conic Gradient Border around circle */}
+                <div className="absolute w-[88%] h-[88%] rounded-full bg-[conic-gradient(from_0deg_at_50%_50%,#06B6D4,#3B82F6,#8B5CF6,#EC4899,#06B6D4)] animate-[spin_5s_linear_infinite] opacity-80 blur-md group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute w-[86%] h-[86%] rounded-full bg-[conic-gradient(from_0deg_at_50%_50%,#06B6D4,#3B82F6,#8B5CF6,#EC4899,#06B6D4)] animate-[spin_4s_linear_infinite]"></div>
+                
+                {/* Inner White / Dark Ring Base */}
+                <div className="absolute w-[84%] h-[84%] rounded-full bg-slate-950 shadow-[0_20px_50px_rgba(37,99,235,0.25)]"></div>
+
                 {/* Image */}
                 <img
                   src={rahadUserImage}
                   alt="Rahad Hassan"
-                  className="w-[90%] h-[90%] object-cover rounded-full shadow-[0_20px_50px_rgb(0,0,0,0.15)] ring-8 ring-white transition-transform duration-700 group-hover:scale-105"
+                  className="relative z-10 w-[82%] h-[82%] object-cover rounded-full transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
                 
                 {/* Premium Floating Badge */}
                 <motion.div 
-                  animate={{ y: [0, -15, 0] }}
-                  transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                  animate={{ y: [0, -12, 0] }}
+                  transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
                   style={{ x: "-50%" }}
-                  className="absolute bottom-6 left-1/2 w-max bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl px-6 py-3.5 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.4)] border border-white/10 flex items-center gap-4 hover:border-white/20 hover:shadow-[0_25px_50px_rgba(0,0,0,0.5)] transition-all duration-700"
+                  className="absolute bottom-4 left-1/2 w-max z-20 bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-xl px-6 py-3.5 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.5)] border border-cyan-400/30 flex items-center gap-4 hover:border-cyan-400/60 hover:shadow-[0_25px_50px_rgba(6,182,212,0.4)] transition-all duration-700"
                 >
-                  <div className="relative flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden shadow-[inset_0_1px_3px_rgba(255,255,255,0.3)] bg-gradient-to-br from-blue-500/80 to-purple-600/80 border border-white/30">
+                  <div className="relative flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden shadow-[inset_0_1px_3px_rgba(255,255,255,0.3)] bg-gradient-to-br from-cyan-500 to-blue-600 border border-white/30">
                     <span className="relative font-black text-white text-base tracking-tighter drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">AI</span>
                   </div>
                   <div className="flex flex-col justify-center pr-2">
                     <div className="flex items-center gap-1.5 mb-1">
                       <div className="relative flex h-1.5 w-1.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-300 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-400"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-300 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-cyan-400"></span>
                       </div>
-                      <span className="text-[9px] font-bold tracking-[0.2em] text-white/90 uppercase drop-shadow-md">Premium Quality</span>
+                      <span className="text-[9px] font-bold tracking-[0.2em] text-cyan-300 uppercase drop-shadow-md">Verified Expert</span>
                     </div>
                     <span className="text-[17px] font-extrabold text-white leading-none tracking-wide whitespace-nowrap drop-shadow-lg">
                       AI to WordPress

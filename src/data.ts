@@ -22,8 +22,14 @@ import {
   BookOpen,
   Layers,
   ShoppingBag,
-  Shield
+  Shield,
+  Rocket,
+  Briefcase,
+  Building2
 } from 'lucide-react';
+
+import ugdLogo from './assets/images/unlimited_growth_drive_logo.svg';
+import intugrowLogo from './assets/images/intugrow_logo.png';
 
 export const personalInfo = {
   name: "Rahad Hassan",
@@ -44,6 +50,7 @@ export const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Services', href: '#services' },
+  { name: 'Experience', href: '#journey' },
   { name: 'Work', href: '#work' },
   { name: 'Testimonials', href: '#testimonials' },
   { name: 'Contact', href: '#contact' },
@@ -82,33 +89,44 @@ export const services = [
   }
 ];
 
+export const experiences = [
+  {
+    company: "Unlimited Growth Drive",
+    role: "WordPress Developer",
+    period: "2024 - 2025",
+    employmentType: "Full-Time / Agency",
+    description: "WordPress Developer specializing in Elementor, responsive website design, and website customization.",
+    logo: ugdLogo,
+    website: "https://www.unlimitedgrowthdrive.com",
+    badge: "Agency",
+    icon: Rocket
+  },
+  {
+    company: "IntuGrow",
+    role: "WordPress & Elementor Specialist",
+    period: "2025 - 2026",
+    employmentType: "WordPress Specialist",
+    description: "WordPress & Elementor Specialist focused on modern website design, landing pages, and responsive layouts.",
+    logo: intugrowLogo,
+    website: "https://intugrow.com",
+    badge: "Growth Partner",
+    icon: TrendingUp
+  }
+];
+
 export const education = [
   {
-    role: "Senior WordPress Developer & AI Automation Expert",
-    period: "2020 - Present",
-    company: "Freelance / Remote",
-    description: "Leading the development of premium, high-conversion WordPress websites using Elementor Pro. Integrating AI automation tools (n8n, Zapier, custom GPTs) to streamline client business operations and support.",
-    icon: Code2
-  },
-  {
-    role: "Elementor Specialist & Web Designer",
-    period: "2018 - 2020",
-    company: "Digital Agency",
-    description: "Designed and developed pixel-perfect, responsive websites from Figma/PSD designs using Elementor. Focused on UI/UX, conversion rate optimization, and WooCommerce integrations.",
-    icon: LayoutTemplate
-  },
-  {
-    role: "B.Sc. in Computer Science",
-    period: "2014 - 2018",
-    company: "University Name",
-    description: "Built a strong foundation in software engineering, database management, and web technologies. Developed an early passion for creating dynamic web applications.",
+    role: "B.Sc. in Computer Science & Engineering",
+    period: "2016 - 2020",
+    company: "University of Science and Technology",
+    description: "Built strong foundations in software engineering, database architectures, front-end systems, and human-computer interaction.",
     icon: GraduationCap
   },
   {
-    role: "Web Development Certification",
-    period: "2016",
-    company: "Tech Institute",
-    description: "Completed comprehensive training in front-end and back-end web development, focusing on modern web standards and CMS platforms like WordPress.",
+    role: "Professional WordPress & Web Development Certification",
+    period: "2020",
+    company: "Tech Academy",
+    description: "Mastered advanced WordPress theme building, Elementor architecture, custom post types, WooCommerce workflows, and speed optimization.",
     icon: BookOpen
   }
 ];
@@ -166,8 +184,15 @@ export const skills = [
 
 export const projects = [
   {
+    title: "Digital Growth Agency",
+    tag: "WordPress",
+    description: "Custom WordPress portal and digital growth engine designed for high-impact brand acceleration, SEO, and client acquisition.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+    link: "https://qseba.com/"
+  },
+  {
     title: "Central Surplus eCommerce",
-    tag: "WooCommerce & CRO",
+    tag: "WooCommerce",
     description: "Enhanced eCommerce performance and conversion optimization for an online surplus store.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2574&auto=format&fit=crop",
     link: "https://yoursitehub.com/Central-Surplus-Ecommerce-Case-Study/"
@@ -180,11 +205,25 @@ export const projects = [
     link: "https://cookiesandcreamfranchise.com/"
   },
   {
+    title: "Reliable Roofing.",
+    tag: "WooCommerce",
+    description: "Comprehensive roofing contractor & home exterior eCommerce store with custom quote request and service booking built on WooCommerce.",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop",
+    link: "https://idxbd.shop/woo/home-roffing/"
+  },
+  {
     title: "MRA Consultancy Platform",
-    tag: "WordPress Elementor",
+    tag: "WordPress",
     description: "Professional business consulting and corporate advisory services.",
     image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2574&auto=format&fit=crop",
     link: "https://mra-consultancy.com/"
+  },
+  {
+    title: "Grow Online IntuGrow",
+    tag: "Elementor",
+    description: "Full-suite digital consulting and enterprise growth platform built for high-impact online branding and scalable marketing.",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2670&auto=format&fit=crop",
+    link: "https://intugrow.com/"
   },
   {
     title: "You Coaching Swiss Portal",
@@ -192,6 +231,13 @@ export const projects = [
     description: "Personal development, leadership, and coaching services portal.",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop",
     link: "https://www.you-coaching.ch/"
+  },
+  {
+    title: "Roofing Experience",
+    tag: "Elementor",
+    description: "Interactive commercial & residential roofing showcase featuring dynamic project portfolios, estimate calculators, and responsive service pages.",
+    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18615f8?q=80&w=2670&auto=format&fit=crop",
+    link: "https://idxbd.shop/live-project/"
   },
   {
     title: "Roofing to chimneys,",
@@ -216,86 +262,116 @@ export const projects = [
   },
   {
     title: "Lyons National Bank SEO",
-    tag: "SEO & Strategy",
+    tag: "WordPress",
     description: "Data-driven SEO strategies improving local visibility and search rankings for the banking sector.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop",
     link: "https://yoursitehub.com/case-studies/lyons-national-bank-seo/"
   },
   {
     title: "NYS CCF Government Smartsite",
-    tag: "Web Development",
+    tag: "WordPress",
     description: "Custom robust platform tailored for government organizations focusing on accessibility and speed.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
     link: "https://yoursitehub.com/case-studies/nys-ccf-government-smartsite/"
   },
   {
     title: "Community Bank NA SEO",
-    tag: "SEO Optimization",
+    tag: "WordPress",
     description: "Comprehensive SEO optimization driving targeted organic traffic for financial institutions.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
     link: "https://yoursitehub.com/case-studies/community-bank-na-seo/"
   },
   {
     title: "Foodlink Smartsite & SEO",
-    tag: "Development & SEO",
+    tag: "WordPress",
     description: "Modernized website architecture and SEO for improved local outreach and search presence.",
     image: "https://images.unsplash.com/photo-1493770348161-369560ae357d?q=80&w=2670&auto=format&fit=crop",
     link: "https://yoursitehub.com/case-studies/foodlink-smartsite-seo/"
   },
   {
     title: "Classic Six Paid Search",
-    tag: "Paid Advertising",
+    tag: "WooCommerce",
     description: "Precision targeting and ad spend optimization delivering high conversions for premium brands.",
     image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2670&auto=format&fit=crop",
     link: "https://yoursitehub.com/case-studies/classic-six-paid-search/"
   },
   {
     title: "USW Home Services Paid Search",
-    tag: "Paid Search & Ads",
+    tag: "WordPress",
     description: "ROI-driven paid search campaign optimization targeting local home service customers.",
     image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2674&auto=format&fit=crop",
     link: "https://yoursitehub.com/case-studies/usw-home-services-paid-search/"
   },
   {
     title: "Dentist Partners Platform",
-    tag: "Web Development",
+    tag: "WordPress",
     description: "Modern, patient-focused web platform for dental practices with online booking integration.",
     image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2670&auto=format&fit=crop",
     link: "https://dentist-partners.vercel.app/"
   },
   {
     title: "Brightwell Family Dental",
-    tag: "Web Development",
+    tag: "Elementor",
     description: "Elegant and user-friendly digital experience tailored for family dental care services.",
     image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2670&auto=format&fit=crop",
     link: "https://brightwell-family-dental.vercel.app/"
   },
   {
     title: "Dental Care Portal",
-    tag: "Web Development",
+    tag: "WordPress",
     description: "Comprehensive dental care portal emphasizing a healthier lifestyle through oral hygiene.",
-    image: "https://images.unsplash.com/photo-1598256989800-fea5ce5146f2?q=80&w=2674&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1598256989800-fea5ce5146f2?q=80&w=2670&auto=format&fit=crop",
     link: "https://dental-care-for-a-healthier.vercel.app/"
   }
 ];
 
 export const testimonials = [
   {
-    text: "The website he built for us was beyond expectations. Fast, clean, and exactly what we envisioned.",
-    author: "Rahul M.",
-    role: "Startup Founder 🇮🇳",
-    rating: 5
+    author: "Aisha Khan",
+    role: "Marketing Lead",
+    company: "CloudScale Growth",
+    country: "🇨🇦 Canada",
+    rating: 5,
+    text: "Our new website is faster, easier to manage, and connected with our marketing tools through automation. Rahad always explained every step clearly and delivered exactly what we needed."
   },
   {
-    text: "Professional communication and premium quality. He delivered before the deadline — impressed!",
-    author: "James L.",
-    role: "Small Business Owner 🇬🇧",
-    rating: 5
+    author: "Daniel Brooks",
+    role: "CTO",
+    company: "Nexus Automation Labs",
+    country: "🇬🇧 UK",
+    rating: 5,
+    text: "Rahad built reliable AI workflows that connected multiple platforms without any hassle. The automations have saved our team countless hours and reduced manual errors."
   },
   {
-    text: "Our site speed improved dramatically and we're already seeing more leads. Highly recommend!",
-    author: "Fatima K.",
-    role: "E-commerce Brand 🇸🇦",
-    rating: 5
+    author: "Priya Patel",
+    role: "Product Manager",
+    company: "Aura Commerce Tech",
+    country: "🇦🇺 Australia",
+    rating: 5,
+    text: "Working with Rahad was effortless. He combined WordPress development with AI automation to create a solution that improved both customer experience and our team's productivity."
+  },
+  {
+    author: "Marcus Lindner",
+    role: "Operations Director",
+    company: "Nordic Living & Trade",
+    country: "🇩🇪 Germany",
+    rating: 5,
+    text: "He built our entire WooCommerce store with dynamic pricing calculators and custom checkout. Clean code, prompt communication, and delivered 3 days ahead of schedule!"
+  },
+  {
+    author: "Elena Vasquez",
+    role: "Creative Director",
+    company: "Studio Nova Media",
+    country: "🇺🇸 United States",
+    rating: 5,
+    text: "Outstanding attention to detail! He took our Figma prototype and translated every micro-interaction and responsive breakpoint into Elementor with 100% precision."
+  },
+  {
+    author: "James Richardson",
+    role: "CEO & Co-Founder",
+    company: "Apex Digital UK",
+    country: "🇬🇧 United Kingdom",
+    rating: 5,
+    text: "Rahad completely transformed our sluggish WordPress site into a lightning-fast digital powerhouse. Our Core Web Vitals score shot from 42 to 96, and customer bounce rate dropped immediately."
   }
 ];

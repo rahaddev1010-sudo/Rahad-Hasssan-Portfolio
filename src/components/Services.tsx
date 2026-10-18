@@ -75,14 +75,14 @@ const ServiceCard: React.FC<{ service: any; index: number }> = ({ service, index
 
 export const Services = () => {
   return (
-    <section id="services" className="py-24 md:py-32 relative bg-[#F0F4F8] overflow-hidden">
+    <section id="services" className="py-14 md:py-18 relative bg-[#F0F4F8] overflow-hidden">
       {/* Ambient background glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[400px] bg-gradient-to-r from-blue-400/20 via-purple-400/10 to-blue-400/20 blur-[120px] rounded-full pointer-events-none" />
       
       <div className="max-w-[1240px] mx-auto px-6 relative z-10">
         
         {/* Section Header */}
-        <div className="text-left mb-16 md:mb-24">
+        <div className="text-left mb-10 md:mb-12">
           <motion.div 
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -11,7 +11,7 @@ export const Portfolio = () => {
   const [visibleCount, setVisibleCount] = useState(6);
 
   const filteredProjects = projects.filter(project => 
-    activeTab === 'All' ? true : project.tag === activeTab
+    activeTab === 'All' ? true : project.tag.toLowerCase().includes(activeTab.toLowerCase())
   );
 
   const visibleProjects = filteredProjects.slice(0, visibleCount);
@@ -25,7 +25,7 @@ export const Portfolio = () => {
       <div className="max-w-[1240px] mx-auto px-6">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-12 gap-6">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
